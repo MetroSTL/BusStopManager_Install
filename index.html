@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
@@ -16,11 +17,22 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div>
-            <h1 class='center helvetica w-100'>Inventory Request</h1>
-            <h3 class="center w-100 helvetica w-100">Select a facility to get started</h3>
+        
+        <h1 class='center helvetica w-100'>Vehicle Cleaning App</h1>
+        <h3 class="center w-100 helvetica w-100">Select or search for a Vehicle to get started</h3>
+        
+        <div class="center">
+            <form class="fl w-60 pa4 black-80">
+                <div class="measure">
+                  <label for="vehicle" class="f6 b db mb2">Vehicle ID</label>
+                  <input id="vehicle row" class="helvetica input-reset ba b--black-20 pa2 mb2 db w-70" type="number" aria-describedby="name-desc">
+                  <a class="row helvetica f6 link  br1 ph3 pv2   white bg-dark-blue w-20" href="#0">Search</a>
+                  <small id="vehicle" class="f6 black-60 db mb2">Enter a vehicle number to start a search.</small>
+                </div>
+              </form>    
         </div>
-        <div id="main" class="center">
+
+        <div id="list-div" class="main center">
             <div id="list"></div>
         </div>
         

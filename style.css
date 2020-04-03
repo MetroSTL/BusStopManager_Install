@@ -1,4 +1,4 @@
-#main {
+.main {
     width: 80%;
     height: 100%;
     display: flex;
@@ -8,6 +8,10 @@
     display:flex;
     align-items: center;
     justify-content: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
 }
 #ifrm {
     border: solid 1px black;
@@ -23,7 +27,7 @@
     width: 700px;
     margin-left: -350px;
 }
-@@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     body {
       height: 100px;
       margin-top: -175px;
