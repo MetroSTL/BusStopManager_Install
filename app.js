@@ -4,7 +4,6 @@ const survey123Url = 'https://services2.arcgis.com/ZV8Mb62EedSw2aTU/arcgis/rest/
 //HTML SECTION SELECTORS
 const list_div = document.getElementById('list');
 const item = document.querySelector('button_popup');
-const main = document.querySelector('#main');
 const button_popup = document.querySelector('.button_popup');
 
 let vehicles, filtered_vehicles;
@@ -108,10 +107,11 @@ const clickEvent = async (event) => {
     }else{        
         let item = event.target.closest('.openpop');
         let url = item.getAttribute('data-url');
-        console.log('list element click');
         const ifrm = document.createElement('iframe');
         const el = document.getElementById('marker');
-        
+        const main = document.querySelector('#main');
+
+        console.log('list element click');
         ifrm.setAttribute('id', 'ifrm'); // assign an id
         ifrm.setAttribute(`src`, url);
 
