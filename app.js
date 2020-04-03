@@ -7,6 +7,7 @@ const item = document.querySelector('button_popup');
 const main = document.querySelector('#main');
 const button_popup = document.querySelector('.button_popup');
 
+let vehicles, filtered_vehicles;
 
 //POLYFILLS
 if (!Element.prototype.matches) {
@@ -26,18 +27,31 @@ if (!Element.prototype.matches) {
     };
   }
 
+const filter_data = (data, input) => {
+    const d = data.filter(d => {
+        return d.attributes.vehicle_number == input
+    });
+    filtered_vehicles = d;
+    return d
+}
 
-
-const render = async () => {
-    // DATA
+const get_survey_data = async () => {
     const response = await fetch(survey123Url);
     const json = await response.json();
-    const data = json.features;
-    console.log(data)
-    //LINKS
-    //HTML
-    //PROCESSING 
-    const sorted_data = data.sort(function (a, b) {
+    let data = json.features;
+    vehicles = data;
+    return data;
+}
+
+const clear_data = async () => {
+    list_div.innerHTML = '';
+    return;
+}
+
+
+const render = async (d) => {
+    // SORTED DATA BY VEHICLE NUMBER
+    const sorted_data = d.sort(function (a, b) {
         if (a.attributes.vehicle_number <b.attributes.vehicle_number) {
             return -1;
         }
@@ -46,67 +60,75 @@ const render = async () => {
         }
         return 0;
     });
-
-    console.log(sorted_data)
-
+    list_div.innerHTML = '';
     sorted_data.forEach(element => {
-        // FIELDS
         const vehicle_number = element.attributes.vehicle_number;
-        const requesting_facility = element.attributes.requesting_facility;
-        const field_2 = element.attributes.field_2;
-
-
-        // const confirmationURL = `https://survey123.arcgis.com/share/9c92a1442f8b49faa8d5c8da83e581be?field:requesting_facility=${new_requesting_facility}`
-        // https://survey123.arcgis.com/share/1cb28b212b5542acbbdbaa35feba0765?field:submittedBy=Fernando%20Paredes
-        
         
         list_div.innerHTML += 
             `<div id='${vehicle_number}' class='button_popup fl w-100 '> 
                 <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-blue'>
-                    <h2 class='f3 helvetica fl w-100'>${vehicle_number}</h2>
+                    <h2 class='fl f3 helvetica fl'>Vehicle: ${vehicle_number}</h2>
+                    <p class="fl f3 helvetica fl">This is some other content</p>
                 </a>
             </div>`
-    
     });
 
 };
 
 
-const clickEvent = (event) => {
+const clickEvent = async (event) => {
     event.preventDefault();
-    const iframe = document.getElementById('ifrm');
-
-
-    if(!event.target.closest('#iframe') && iframe){
-        console.log('iframe present')
+    const iframe_exists = document.getElementById('ifrm');
+    const iframe = event.target.closest('#iframe');
+    const search = event.target.closest('#search');
+    const vehicle_search = document.getElementById('vehicle').value;
+    
+    // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
+    if(!iframe && iframe_exists){
+        console.log('1')
         iframe.parentNode.removeChild(iframe);
-        return
+        return;
+        
+    // SEARCH CLICK!!!
+    }else if(search){
+        clear_data();
+        let fv = filter_data(vehicles, vehicle_search)
+        render(await fv);
+        return;
+        
+    // NOT A LIST ITEM!!!
     }else if(!event.target.closest('.openpop') && !iframe){
         console.log('Not list_div');
+        clear_data();
+        vehicles = await get_survey_data();
+        render(await vehicles);
         return;
+        
+        // CLICK LIST ELEMENT AND OPEN IFRAME!!!
     }else{        
-        console.log('list element click')
-
         let item = event.target.closest('.openpop');
         let url = item.getAttribute('data-url');
-        console.log(`url: ${url}`)
-
-        var ifrm = document.createElement('iframe');
+        console.log('list element click');
+        const ifrm = document.createElement('iframe');
+        const el = document.getElementById('marker');
+        
         ifrm.setAttribute('id', 'ifrm'); // assign an id
         ifrm.setAttribute(`src`, url);
 
-        //document.body.appendChild(ifrm); // to place at end of document
-
         // // to place before another page element
-        var el = document.getElementById('marker');
         main.parentNode.insertBefore(ifrm, el);
 
         // // assign url
         // ifrm.setAttribute('src', 'demo.html');
-
+        
+        return;
     }
 }
 
+get_survey_data().then(data =>{
+    render(vehicles);
+});
 
-render();
 window.addEventListener("submit", clickEvent, false)
+window.addEventListener("click", clickEvent, false)
+
