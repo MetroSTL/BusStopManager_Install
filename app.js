@@ -1,4 +1,4 @@
-import { jsonURL as jsonURL } from './private.js'; 
+import { jsonURL as jsonURL, surveyID as surveyID } from './private.js'; 
 
 //STATIC URLS
 const survey123Url = jsonURL();
@@ -9,27 +9,24 @@ const list_div = document.getElementById('list');
 const item = document.querySelector('button_popup');
 const button_popup = document.querySelector('.button_popup');
 
+// JAVASCRIPT VARIABLES
 let vehicles, filtered_vehicles;
 let filtered = false;
 
 //POLYFILLS
 if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector || 
-                                Element.prototype.webkitMatchesSelector;
-  }
-  
-  if (!Element.prototype.closest) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}if (!Element.prototype.closest) {
     Element.prototype.closest = function(s) {
-      var el = this;
-  
-      do {
-        if (el.matches(s)) return el;
-        el = el.parentElement || el.parentNode;
-      } while (el !== null && el.nodeType === 1);
-      return null;
-    };
-  }
+        let el = this;
+        do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+}};
 
+// DATA PROCESSING
 const filter_data = (data, input) => {
     const d = data.filter(d => {
         return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.features.properties.vehicle_number)
@@ -103,8 +100,8 @@ const render = async (d) => {
             }
 
             list_div.innerHTML += 
-                `<div id='${element.properties.vehicle_number}' class='button_popup fl w-100 data-oid = ${element.properties.objectid}'> 
-                    <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white ${color()}'>
+                `<div id='${element.properties.vehicle_number}' class='button_popup fl w-100 '>
+                    <a data-oid = ${element.properties.objectid} class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white ${color()}'>
                         <h2 class='fl f3 helvetica fl'>Vehicle: ${element.properties.vehicle_number}</h2>
                         <h2 class='fl f3 helvetica fl'>   Last Cleaned: ${newDate(date)}</h2>
                     </a>
@@ -135,7 +132,7 @@ const clickEvent = async (event) => {
     if(!iframe && iframe_exists){
         
         // CLOSE IFRAME
-        iframe.parentNode.removeChild(iframe);
+        iframe_exists.parentNode.removeChild(iframe_exists);
         return;
         
     // SEARCH CLICK!!!
@@ -146,11 +143,11 @@ const clickEvent = async (event) => {
             render(vehicles)
             return;
         }
-
     // CLICK LIST ELEMENT AND OPEN IFRAME!!!
     }else if (event.target.closest('.openpop')){        
         let item = event.target.closest('.openpop');
-        let url = item.getAttribute('data-url');
+        console.log(item);
+        let url = `https://survey123.arcgis.com/share/${surveyID()}?mode=edit&objectId=${item.getAttribute('data-oid')}&version=latest`;
         const ifrm = document.createElement('iframe');
         const el = document.getElementById('marker');
         const main = document.querySelector('#main');
