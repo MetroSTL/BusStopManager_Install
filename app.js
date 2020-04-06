@@ -1,8 +1,8 @@
-import { surveyID as surveyID } from './private.js'; 
+import { jsonURL as jsonURL } from './private.js'; 
 
 //STATIC URLS
-const survey123Url = surveyID();
-console.log(surveyID)
+const survey123Url = jsonURL();
+console.log(jsonURL)
 
 //HTML SECTION SELECTORS
 const list_div = document.getElementById('list');
@@ -32,7 +32,8 @@ if (!Element.prototype.matches) {
 
 const filter_data = (data, input) => {
     const d = data.filter(d => {
-        return d.attributes.vehicle_number == `${input}*`
+        return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.attributes.vehicle_number)
+        // return d.attributes.vehicle_number == `${input}*`
     });
     filtered_vehicles = d;
     filtered = true;
@@ -44,7 +45,7 @@ const get_survey_data = async () => {
     const response = await fetch(survey123Url);
     const json = await response.json();
     let data = json.features;
-    console.log(data);
+    console.log('get_survey_data', data);
     vehicles = data;
     return data;
 }
@@ -86,7 +87,7 @@ const render = async (d) => {
                     hours = hours - 12
                     tod = ' PM'
                 }
-            return date.getMonth() + '/' + date.getDay() + '/' + date.getYear() + ' ' + hours + ':' + date.getMinutes() + tod;
+            return date.getMonth() + '/' + date.getDay() + '/' + date.getFullYear() + ' ' + hours + ':' + date.getMinutes() + tod;
             }
 
             let color = () => {
@@ -99,7 +100,7 @@ const render = async (d) => {
             }
 
             list_div.innerHTML += 
-                `<div id='${vehicle_number}' class='button_popup fl w-100 '> 
+                `<div id='${vehicle_number}' class='button_popup fl w-100 data-oid = ${element.id}'> 
                     <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white ${color()}'>
                         <h2 class='fl f3 helvetica fl'>Vehicle: ${vehicle_number}</h2>
                         <h2 class='fl f3 helvetica fl'>   Last Cleaned: ${newDate(date)}</h2>
@@ -136,7 +137,6 @@ const clickEvent = async (event) => {
         
     // SEARCH CLICK!!!
     }else if(search){
-        console.log((filtered))
         if(vehicle_search != ''){
             searching();
         }else if(vehicle_search == '' && filtered){
@@ -152,7 +152,6 @@ const clickEvent = async (event) => {
         const el = document.getElementById('marker');
         const main = document.querySelector('#main');
 
-        console.log('list element click');
         ifrm.setAttribute('id', 'ifrm'); // assign an id
         ifrm.setAttribute(`src`, url);
 
