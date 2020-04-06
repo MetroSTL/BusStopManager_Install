@@ -32,8 +32,8 @@ if (!Element.prototype.matches) {
 
 const filter_data = (data, input) => {
     const d = data.filter(d => {
-        return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.attributes.vehicle_number)
-        // return d.attributes.vehicle_number == `${input}*`
+        return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.features.properties.vehicle_number)
+        // return d.features.properties.vehicle_number == `${input}*`
     });
     filtered_vehicles = d;
     filtered = true;
@@ -43,7 +43,11 @@ const filter_data = (data, input) => {
 const get_survey_data = async () => {
     console.log('fetch');
     const response = await fetch(survey123Url);
+    console.log(response);
+
     const json = await response.json();
+    console.log(json);
+
     let data = json.features;
     console.log('get_survey_data', data);
     vehicles = data;
@@ -60,10 +64,10 @@ const render = async (d) => {
     list_div.innerHTML = 'Data is loading...';
     // SORTED DATA BY VEHICLE NUMBER
     const sorted_data = d.sort(function (a, b) {
-        if (a.attributes.vehicle_number <b.attributes.vehicle_number) {
+        if (a.properties.vehicle_number <b.properties.vehicle_number) {
             return -1;
         }
-        if (b.attributes.vehicle_number <a.attributes.vehicle_number) {
+        if (b.properties.vehicle_number <a.properties.vehicle_number) {
             return 1;
         }
         return 0;
@@ -74,12 +78,11 @@ const render = async (d) => {
         list_div.innerHTML = 'No vehicles with that number';
     }else{
         sorted_data.forEach(element => {
-            const vehicle_number = element.attributes.vehicle_number;
             let curTime = new Date();
 
             let cleaningTime = 2 * 60 * 60 * 1000;
 
-            let date = new Date(element.attributes.cleaning_datetime);
+            let date = new Date(element.properties.cleaning_datetime);
             let newDate = (date) => {
                 let tod = ' AM';
                 let hours = date.getHours()
@@ -100,9 +103,9 @@ const render = async (d) => {
             }
 
             list_div.innerHTML += 
-                `<div id='${vehicle_number}' class='button_popup fl w-100 data-oid = ${element.id}'> 
+                `<div id='${element.properties.vehicle_number}' class='button_popup fl w-100 data-oid = ${element.properties.objectid}'> 
                     <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white ${color()}'>
-                        <h2 class='fl f3 helvetica fl'>Vehicle: ${vehicle_number}</h2>
+                        <h2 class='fl f3 helvetica fl'>Vehicle: ${element.properties.vehicle_number}</h2>
                         <h2 class='fl f3 helvetica fl'>   Last Cleaned: ${newDate(date)}</h2>
                     </a>
                 </div>`;
