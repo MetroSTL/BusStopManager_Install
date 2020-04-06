@@ -1,5 +1,8 @@
+import { surveyID as surveyID } from './private.js'; 
+
 //STATIC URLS
-const survey123Url = 'https://services2.arcgis.com/ZV8Mb62EedSw2aTU/arcgis/rest/services/survey123_7c0c3ea3fb6b4fa986769afb9ae45e5e_fieldworker/FeatureServer/0/query?where=1%3D1&outFields=CreationDate,EditDate,Editor,requested_cleaning_areas,requested_cleaning_areas_other,vehicle_number,badge_number,cleaning_datetime,completed&outSR=4326&f=json'
+const survey123Url = surveyID();
+console.log(surveyID)
 
 //HTML SECTION SELECTORS
 const list_div = document.getElementById('list');
@@ -7,6 +10,7 @@ const item = document.querySelector('button_popup');
 const button_popup = document.querySelector('.button_popup');
 
 let vehicles, filtered_vehicles;
+let filtered = false;
 
 //POLYFILLS
 if (!Element.prototype.matches) {
@@ -28,16 +32,19 @@ if (!Element.prototype.matches) {
 
 const filter_data = (data, input) => {
     const d = data.filter(d => {
-        return d.attributes.vehicle_number == input
+        return d.attributes.vehicle_number == `${input}*`
     });
     filtered_vehicles = d;
+    filtered = true;
     return d
 }
 
 const get_survey_data = async () => {
+    console.log('fetch');
     const response = await fetch(survey123Url);
     const json = await response.json();
     let data = json.features;
+    console.log(data);
     vehicles = data;
     return data;
 }
@@ -49,6 +56,7 @@ const clear_data = async () => {
 
 
 const render = async (d) => {
+    list_div.innerHTML = 'Data is loading...';
     // SORTED DATA BY VEHICLE NUMBER
     const sorted_data = d.sort(function (a, b) {
         if (a.attributes.vehicle_number <b.attributes.vehicle_number) {
@@ -59,18 +67,46 @@ const render = async (d) => {
         }
         return 0;
     });
+    
     list_div.innerHTML = '';
-    sorted_data.forEach(element => {
-        const vehicle_number = element.attributes.vehicle_number;
-        
-        list_div.innerHTML += 
-            `<div id='${vehicle_number}' class='button_popup fl w-100 '> 
-                <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-blue'>
-                    <h2 class='fl f3 helvetica fl'>Vehicle: ${vehicle_number}</h2>
-                    <p class="fl f3 helvetica fl">This is some other content</p>
-                </a>
-            </div>`
-    });
+    if(sorted_data.length == 0){
+        list_div.innerHTML = 'No vehicles with that number';
+    }else{
+        sorted_data.forEach(element => {
+            const vehicle_number = element.attributes.vehicle_number;
+            let curTime = new Date();
+
+            let cleaningTime = 2 * 60 * 60 * 1000;
+
+            let date = new Date(element.attributes.cleaning_datetime);
+            let newDate = (date) => {
+                let tod = ' AM';
+                let hours = date.getHours()
+                if(date.getHours() > 12){
+                    hours = hours - 12
+                    tod = ' PM'
+                }
+            return date.getMonth() + '/' + date.getDay() + '/' + date.getYear() + ' ' + hours + ':' + date.getMinutes() + tod;
+            }
+
+            let color = () => {
+                if((curTime - date) > cleaningTime){
+                    return 'bg-red';
+                }else{
+                    return 'bg-blue';
+                }
+
+            }
+
+            list_div.innerHTML += 
+                `<div id='${vehicle_number}' class='button_popup fl w-100 '> 
+                    <a class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white ${color()}'>
+                        <h2 class='fl f3 helvetica fl'>Vehicle: ${vehicle_number}</h2>
+                        <h2 class='fl f3 helvetica fl'>   Last Cleaned: ${newDate(date)}</h2>
+                    </a>
+                </div>`;
+        }
+    )};
 
 };
 
@@ -82,29 +118,34 @@ const clickEvent = async (event) => {
     const search = event.target.closest('#search');
     const vehicle_search = document.getElementById('vehicle').value;
     
+    const searching = async () => {
+        list_div.innerHTML = 'Data is loading...';
+        clear_data();
+        filtered = true;
+        let fv = filter_data(vehicles, `${vehicle_search}*`);
+        render(await fv);
+        return;
+    };
+
     // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     if(!iframe && iframe_exists){
-        console.log('1')
+        
+        // CLOSE IFRAME
         iframe.parentNode.removeChild(iframe);
         return;
         
     // SEARCH CLICK!!!
     }else if(search){
-        clear_data();
-        let fv = filter_data(vehicles, vehicle_search)
-        render(await fv);
-        return;
-        
-    // NOT A LIST ITEM!!!
-    }else if(!event.target.closest('.openpop') && !iframe){
-        console.log('Not list_div');
-        clear_data();
-        vehicles = await get_survey_data();
-        render(await vehicles);
-        return;
-        
-        // CLICK LIST ELEMENT AND OPEN IFRAME!!!
-    }else{        
+        console.log((filtered))
+        if(vehicle_search != ''){
+            searching();
+        }else if(vehicle_search == '' && filtered){
+            render(vehicles)
+            return;
+        }
+
+    // CLICK LIST ELEMENT AND OPEN IFRAME!!!
+    }else if (event.target.closest('.openpop')){        
         let item = event.target.closest('.openpop');
         let url = item.getAttribute('data-url');
         const ifrm = document.createElement('iframe');
