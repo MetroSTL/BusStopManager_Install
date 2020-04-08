@@ -29,7 +29,7 @@ if (!Element.prototype.matches) {
 // DATA PROCESSING
 const filter_data = (data, input) => {
     const d = data.filter(d => {
-        return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.features.properties.vehicle_number)
+        return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.properties.vehicle_number)
         // return d.features.properties.vehicle_number == `${input}*`
     });
     filtered_vehicles = d;
@@ -119,11 +119,11 @@ const clickEvent = async (event) => {
     const search = event.target.closest('#search');
     const vehicle_search = document.getElementById('vehicle').value;
     
-    const searching = async () => {
+    const searching = async (value) => {
         list_div.innerHTML = 'Data is loading...';
         clear_data();
         filtered = true;
-        let fv = filter_data(vehicles, `${vehicle_search}*`);
+        let fv = filter_data(vehicles, `${value}*`);
         render(await fv);
         return;
     };
@@ -138,7 +138,7 @@ const clickEvent = async (event) => {
     // SEARCH CLICK!!!
     }else if(search){
         if(vehicle_search != ''){
-            searching();
+            searching(vehicle_search);
         }else if(vehicle_search == '' && filtered){
             render(vehicles)
             return;

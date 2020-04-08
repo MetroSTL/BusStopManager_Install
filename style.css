@@ -1,9 +1,10 @@
 .main {
+    max-width: 600px;
     width: 80%;
     height: 100%;
     display: flex;
 }
-.center, .center a {
+.center, .center a, .center button{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +13,9 @@
     display: flex;
     align-items: flex-start;
     justify-content:flex-start;
+}
+.input {
+    font-size: 40px;
 }
 #ifrm {
     border: solid 1px black;
@@ -26,8 +30,16 @@
 
     width: 700px;
     margin-left: -350px;
+}#delete {
+    background-image: url('assets/delete.svg');
+    background-size: 60%;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 15px;
+    padding: 50px;
 }
-
 @media (max-width: 800px) {
     #ifrm {
         border: solid 1px black;
@@ -43,7 +55,7 @@
         width: 600px;
         margin-left: -300px;
     }
-  }
+}
 @media (max-width: 600px) {
     #ifrm {
         border: solid 1px black;
@@ -59,4 +71,4 @@
         width: 400px;
         margin-left: -200px;
     }
-  }
+}
