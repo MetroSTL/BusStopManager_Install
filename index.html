@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Vehicle Cleaning</title>
+        <title>Stop Install Application</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,28 +18,34 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <h1 class='center helvetica w-100'>Vehicle Cleaning App</h1>
-        <h3 class="center w-100 helvetica w-100">Select or search for a Vehicle to get started</h3>
+        <h1 class='center helvetica w-100'>Bus Stop Install App</h1>
+        <h3 class="center w-100 helvetica w-100">Search for a bus stop to get started</h3>
         
-        <div class="center">
+        <div id='init-search' class="center">
             <form class="pa4 black-80">
-                <label for="vehicle" class="center f6 b mb2">Vehicle ID</label>
+                <label for="stop" class="center f6 b mb2">Stop ID</label>
                 <div class="measure" class=''>
-                    <input id="vehicle" class="input center w-90 helvetica input-reset ba b--black-20 pa2 mb2 " type="number" aria-describedby="name-desc">
+                    <input id="search" class="input center w-90 helvetica input-reset ba b--black-20 pa2 mb2 " type="number" aria-describedby="name-desc">
                     <a id="search" class="input row helvetica link dim br2 ph3 pv2 mb2 dib white bg-dark-blue ">Search</a>
-                    <small id="vehicle" class="row w-60 f6 black-60 mb2">Enter a vehicle number to start a search.</small>
+                    <small id="stop" class="row w-60 f6 black-60 mb2">Enter a Stop ID to start a search.</small>
                     <button id="delete" class="center link dim br2 ph3 pv2 mb2 dib white bg-gray" alt="delete"> </button>
                 </div>
 
             </form>    
+            
+            
         </div>
-
+        
         <div id = "main">
             <div id="list-div" class="main center">
                 <div id="list"><p class="i">Data is loading...</p></div>
             </div>
         </div>
-            
+        
+        <div id="stopInfo">
+
+        </div>
+
         <script type='module' src="app.js" async defer></script>
     </body>
 </html>
