@@ -6,6 +6,10 @@ const list_div = document.getElementById('list');
 const item = document.querySelector('button_popup');
 const button_popup = document.querySelector('.button_popup');
 let stop_search = document.getElementById('search').value;
+const init = document.getElementById('init-search');
+const stopButton = document.getElementById('main');
+let searchData;
+
 
 
 
@@ -70,9 +74,29 @@ const render = async (d) => {
         sorted_data.forEach(element => {
             list_div.innerHTML += 
                 `<div id='${element.properties.STP_ID}' class='button_popup fl w-100 '>
-                    <a data-oid = ${element.properties.objectid} 
+                    <a 
+                        data-stopID = '${element.properties.STP_ID}'
+                        data-onSt = '${element.properties.ON_ST}'
+                        data-atSt = '${element.properties.AT_ST}'
+                        data-stopName = '${element.properties.STP_NAME}'
+                        data-installInfo = '${element.properties.LocChange}'
+                        data-routes = '${element.properties.ROUTES}'
+                        data-tParkPoles ='${element.properties.TParkPoles}'
+                        data-tParkSigns = '${element.properties.TNPSigns}'
+                        data-busStopPole = '${element.properties.TStopPoles}'
+                        data-installPos = '${element.properties.InstPos }'
+                        data-parkSignRear = '${element.properties.NPSign1}'
+                        data-parkSignNSFront = '${element.properties.NPSign2}'
+                        data-parkSignMBFront = '${element.properties.NPSign3}'
+                        data-parkSignFarside = '${element.properties.NPSign4}'
+                        data-gpsLat = '${element.geometry.coordinates[0]}'
+                        data-gpsLon = '${element.geometry.coordinates[1]}'
+                    
+
                     class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-blue'>
-                        <h2 class='fl f3 helvetica fl'>Stop ID: ${element.properties.STP_ID} Stop Name: ${element.properties.STP_NAME}</h2>
+                        <h2 class='fl f3 helvetica fl'>
+                        Stop ID: ${element.properties.STP_ID} 
+                        Stop Name: ${element.properties.STP_NAME}</h2>
                     </a>
                 </div>`;
         }
@@ -80,36 +104,88 @@ const render = async (d) => {
 
 };
 
+const searching = (stop_search) => {
+    list_div.innerHTML = 'Data is loading...';
+        get_survey_data(stop_search).then(data =>{
+            render(data)
+            console.log(data)
+            searchData = data;
+        }) 
+}
+
+
+
 
 const clickEvent = async (event) => {
     event.preventDefault();
-    stop_search = document.getElementById('search').value
     const iframe_exists = document.getElementById('ifrm');
+    stop_search = document.getElementById('search').value
     const iframe = event.target.closest('#iframe');
     const search = event.target.closest('#search');
+    console.log(`event: ${event}`)
+    console.log(event.type)
+    if (event.type == 'submit' && !iframe_exists) {
+        searching(stop_search);
+        return
+    }
 
-    const searching = async (value) => {
-        list_div.innerHTML = 'Data is loading...';
-        clear_data();
-        filtered = true;
-        render(await fv);
+    // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
+    if(!iframe && iframe_exists){
+        
+        // CLOSE IFRAME
+        iframe_exists.parentNode.removeChild(iframe_exists);
         return;
-    };
+        
+    // SEARCH CLICK!!!
+    }else if(search){
+        if(stop_search != ''){
+            searching(stop_search);
+        }else if(stop_search == '' && filtered){
+            render(vehicles)
+            return;
+        }
+    // CLICK LIST ELEMENT AND OPEN IFRAME!!!
+    }else if (event.target.closest('.openpop')){        
+        let item = event.target.closest('.openpop');
+        console.log(item);
+        console.log(item.dataset)
 
-    console.log('search!!!')
-    console.log(event)
-    if(stop_search == ''){
+        let url = `https://survey123.arcgis.com/share/${surveyID()}?field:stopID=${item.dataset.stopid}
+                    &field:onSt=${item.dataset.onst} 
+                    &field:atSt=${item.dataset.atst} 
+                    &field:stopName=${item.dataset.stopname} 
+                    &field:installInfo=${item.dataset.installinfo} 
+                    &field:routes=${item.dataset.routes} 
+                    &field:tParkPoles=${item.dataset.tparkpoles} 
+                    &field:tParkSigns=${item.dataset.tparksigns} 
+                    &field:installSurface=${item.dataset.installSurface}
+                    &field:installBusStopPole=${item.dataset.installpole=='0'? 'no' : 'yes'}
+                    &field:installPos=${item.dataset.InstPos} 
+                    &field:parkSignRear=${item.dataset.parksignrear} 
+                    &field:parkSignNSFront=${item.dataset.parksignnsfront} 
+                    &field:parkSignMBFront=${item.dataset.parksignmbfront} 
+                    &field:parkSignFarside=${item.dataset.parksignfarside} 
+                    &field:gpsLat${item.dataset.gpslat}
+                    &field:gpsLat${item.dataset.gpslon}`;
+        console.log(url)
+        const ifrm = document.createElement('iframe');
+        const el = document.getElementById('marker');
+        const main = document.querySelector('#main');
 
-        return;
-    }else{
-        console.log('here')
-        get_survey_data(stop_search).then(data => render(data))
+
+        ifrm.setAttribute('id', 'ifrm'); // assign an id
+        ifrm.setAttribute(`src`, url);
+
+        main.parentNode.insertBefore(ifrm, el);        
         return;
     }
-};
+}
+
 
 clear_data();
 
+window.addEventListener("click", clickEvent, false)
 window.addEventListener("submit", clickEvent, false)
+
 
 
