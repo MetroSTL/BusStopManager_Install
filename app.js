@@ -30,16 +30,6 @@ if (!Element.prototype.matches) {
         return null;
 }};
 
-// DATA PROCESSING
-// const filter_data = (data, input) => {
-//     const d = data.filter(d => {
-//         return new RegExp('^' + input.replace(/\*/g, '.*') + '$').test(d.properties.Stp_id)
-//         // return d.features.properties.stop_number == `${input}*`
-//     });
-//     filtered_stops = d;
-//     filtered = true;
-//     return d
-// }
 
 const get_survey_data = async (id) => {
     const response = await fetch(jsonURL(id));
@@ -53,7 +43,6 @@ const clear_data = async () => {
     document.getElementById('search').value = '';
     return;
 }
-
 
 const render = async (d) => {
     // SORTED DATA BY stop NUMBER
@@ -84,7 +73,8 @@ const render = async (d) => {
                         data-tParkPoles ='${element.properties.TParkPoles}'
                         data-tParkSigns = '${element.properties.TNPSigns}'
                         data-busStopPole = '${element.properties.TStopPoles}'
-                        data-installPos = '${element.properties.InstPos }'
+                        data-instPos = '${element.properties.InstPos}'
+                        data-stdInstLoc = '${element.properties.StdInLoc}'
                         data-parkSignRear = '${element.properties.NPSign1}'
                         data-parkSignNSFront = '${element.properties.NPSign2}'
                         data-parkSignMBFront = '${element.properties.NPSign3}'
@@ -92,12 +82,14 @@ const render = async (d) => {
                         data-gpsLat = '${element.geometry.coordinates[0]}'
                         data-gpsLon = '${element.geometry.coordinates[1]}'
                     
-
                     class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-blue'>
-                        <h2 class='fl f3 helvetica fl'>
-                        Stop ID: ${element.properties.STP_ID} 
-                        Stop Name: ${element.properties.STP_NAME}</h2>
-                    </a>
+                    <ul>
+                        <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.STP_ID}
+                        </li>
+                        <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.STP_NAME}
+                        </li>    
+                    </ul>
+                        </a>
                 </div>`;
         }
     )};
@@ -158,9 +150,9 @@ const clickEvent = async (event) => {
                     &field:routes=${item.dataset.routes} 
                     &field:tParkPoles=${item.dataset.tparkpoles} 
                     &field:tParkSigns=${item.dataset.tparksigns} 
-                    &field:installSurface=${item.dataset.installSurface}
+                    &field:installSurface=${item.dataset.installsurface}
                     &field:installBusStopPole=${item.dataset.installpole=='0'? 'no' : 'yes'}
-                    &field:installPos=${item.dataset.InstPos} 
+                    &field:assignedPos=${item.dataset.instpos} 
                     &field:parkSignRear=${item.dataset.parksignrear} 
                     &field:parkSignNSFront=${item.dataset.parksignnsfront} 
                     &field:parkSignMBFront=${item.dataset.parksignmbfront} 

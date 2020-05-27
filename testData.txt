@@ -1,0 +1,45 @@
+https://survey123.arcgis.com/share/70845cc533764f7ea2a93ea00699d5ad?field:stopID=11502
+                    &field:onSt=N BELT W 
+                    &field:atSt=5611 N BELT W 
+                    &field:stopName=5611 NORTH BELT WEST WB 
+                    &field:installInfo=undefined 
+                    &field:routes=3514 
+                    &field:tParkPoles=0 
+                    &field:tParkSigns=0 
+                    &field:installSurface=undefined
+                    &field:installBusStopPole=yes
+                    &field:installPos=undefined // broken
+                    &field:parkSignRear=0 
+                    &field:parkSignNSFront=0 
+                    &field:parkSignMBFront=0 
+                    &field:parkSignFarside=0 
+                    &field:gpsLat-90.0320400001829
+                    &field:gpsLat38.5417050000683
+
+
+<a data-stopid="11502" 
+
+data-onst="N BELT W" 
+data-atst="5611 N BELT W" 
+data-stopname="5611 NORTH BELT WEST WB" 
+data-installinfo="No" 
+data-routes="3514" 
+data-tparkpoles="0" 
+data-tparksigns="0" 
+data-busstoppole="null" 
+data-installpos="MB" 
+data-parksignrear="0" 
+data-parksignnsfront="0" 
+data-parksignmbfront="0" 
+data-parksignfarside="0" 
+data-gpslat="-90.0320400001829" 
+data-gpslon="38.5417050000683" class="openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-blue">
+                        <h2 class="fl f3 helvetica fl">
+                        Stop ID: 11502 
+                        Stop Name: 5611 NORTH BELT WEST WB</h2>
+                    </a>
+
+
+&field:installInfo=undefined 
+&field:installSurface=undefined
+&field:installPos=undefined
