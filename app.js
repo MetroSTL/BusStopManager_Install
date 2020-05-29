@@ -1,4 +1,4 @@
-import { jsonURL, surveyID, assessmentUrl } from "./private.js";
+import { jsonURL, surveyID, surveyData } from "./private.js";
 
 //STATIC URLS
 //HTML SECTION SELECTORS
@@ -256,6 +256,6 @@ const clickEvent = async (event) => {
 };
 
 clear_data();
-getAssessments('https://services2.arcgis.com/ZV8Mb62EedSw2aTU/ArcGIS/rest/services/Contractor_Install_Survey_Copy_view/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnHiddenFields=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=pyEcn9_-FVKVC9Ut22I2cXOgJF68ktmpW-ewoGzeoZtPWJhQMJLOhvkqqcSz9xOOxWYi4EoecgofXQTzvL98RGBI8bp4cJ6fFdEr6j8J955LMDRsqZh0TiRD8JoKg-un1i9TcU1aeplJ-172j_C6isiRyj5NKAF06emgS8PelVswBo3ipFRAlL1pu6WJVZ-8APaz5b5x9zMV4Gw3PlRFNeR8hDJiPoD03PF-zCJhGm9bco71698GDAuAQ3fPAU-PEcPSwWa7SB96dH50PAeiUg..');
+getAssessments(surveyData());
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
