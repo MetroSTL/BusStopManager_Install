@@ -1,5 +1,13 @@
 import { jsonURL, surveyID, surveyData } from "./private.js";
 
+
+// todo:change url based on status
+ // edit existing = if failed || pending find the stop id in surveyData()
+ // set url to '' if approved
+ // attach to setStatus();
+
+
+
 //STATIC URLS
 //HTML SECTION SELECTORS
 const list_div = document.getElementById("list");
@@ -37,6 +45,7 @@ if (!Element.prototype.closest) {
   };
 }
 
+// get survey data common function
 const get_survey_data = async (url) => {
   const response = await fetch(url);
   const json = await response.json();
@@ -45,12 +54,14 @@ const get_survey_data = async (url) => {
   return data;
 };
 
+// clears out list of stops and searchbar
 const clear_data = async () => {
   list_div.innerHTML = "";
   document.getElementById("search").value = "";
   return;
 };
 
+// uses assessment status and returns color for css
 const setStatus = (stop) => {
     if (assessments['failed'].includes(String(stop.properties.STP_ID))) {
         return 'red';
@@ -148,7 +159,6 @@ const getIssues = async () => {
         let div = '';
         setTimeout(async () => {
             await data.forEach(async (element) => {
-                console.log('here');
                 list_div.innerHTML = ''
                 list_div.innerHTML +=
                     `<div id='${element.properties.STP_ID}' class='button_popup fl w-100 '>
