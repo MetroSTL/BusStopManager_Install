@@ -76,11 +76,7 @@ const render = async function(d){
     });
 
     list_div.innerHTML = "";
-
-    console.log(sorted_data);
-
     await sorted_data.forEach((element) => {
-        console.log('here');
         list_div.innerHTML +=
             `<div id='${element.properties.STP_ID}' class='button_popup fl w-100 '>
                 <a 
@@ -117,14 +113,12 @@ const searching = (stop_search) => {
   list_div.innerHTML = "Data is loading...";
   get_survey_data(stop_search).then((data) => {
     render(data);
-    console.log(data);
     searchData = data;
   });
 };
 
 const getAssessments = (url) => {
     get_survey_data(url).then((data) => { 
-        console.log(data);
         data.forEach(el => {
             if (el.attributes.approved == "no" || el.attributes.approvalComments != null){
                 document.getElementById('notification-icon').src = 'assets/notification2.svg';
@@ -151,10 +145,9 @@ const getIssues = async () => {
         return await list;
     };
     whatever().then(async data => {
-        console.log(data);      
         let div = '';
-        setTimeout(async() => {
-            await data.forEach(async(element) => {
+        setTimeout(async () => {
+            await data.forEach(async (element) => {
                 console.log('here');
                 list_div.innerHTML = ''
                 list_div.innerHTML +=
@@ -186,12 +179,10 @@ const getIssues = async () => {
                         </ul>
                             </a>
                     </div>`;
-                console.log(div)
                 return await div;
             })
             
-        }, 3000)
-    
+        }, 3000);
     })
 };
 
@@ -252,7 +243,6 @@ const clickEvent = async (event) => {
                     &field:parkSignFarside=${item.dataset.parksignfarside} 
                     &field:gpsLat${item.dataset.gpslat}
                     &field:gpsLat${item.dataset.gpslon}`;
-    console.log(url);
     const ifrm = document.createElement("iframe");
     const el = document.getElementById("marker");
     const main = document.querySelector("#main");
