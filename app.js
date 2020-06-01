@@ -77,10 +77,10 @@ const setStatus = (stop) => {
 const render = async function(d){
   // SORTED DATA BY stop NUMBER
     const sorted_data = await d.sort(function (a, b) {
-        if (a.properties.STP_ID < b.properties.STP_ID) {
+        if (a.properties.stopID < b.properties.stopID) {
         return -1;
         }
-        if (b.properties.STP_ID < a.properties.STP_ID) {
+        if (b.properties.stopID < a.properties.stopID) {
         return 1;
         }
         return 0;
@@ -89,33 +89,16 @@ const render = async function(d){
     list_div.innerHTML = "";
     await sorted_data.forEach((element) => {
         list_div.innerHTML +=
-            `<div id='${element.properties.STP_ID}' class='button_popup fl w-100 '>
-                <a 
-                    data-stopID = '${element.properties.STP_ID}'
-                    data-onSt = '${element.properties.ON_ST}'
-                    data-atSt = '${element.properties.AT_ST}'
-                    data-stopName = '${element.properties.STP_NAME}'
-                    data-installInfo = '${element.properties.LocChange}'
-                    data-routes = '${element.properties.ROUTES}'
-                    data-tParkPoles ='${element.properties.TParkPoles}'
-                    data-tParkSigns = '${element.properties.TNPSigns}'
-                    data-busStopPole = '${element.properties.TStopPoles}'
-                    data-instPos = '${element.properties.InstPos}'
-                    data-stdInstLoc = '${element.properties.StdInLoc}'
-                    data-parkSignRear = '${element.properties.NPSign1}'
-                    data-parkSignNSFront = '${element.properties.NPSign2}'
-                    data-parkSignMBFront = '${element.properties.NPSign3}'
-                    data-parkSignFarside = '${element.properties.NPSign4}'
-                    data-gpsLat = '${element.geometry.coordinates[0]}'
-                    data-gpsLon = '${element.geometry.coordinates[1]}'
-                class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
-                <ul>
-                    <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.STP_ID}
-                    </li>
-                    <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.STP_NAME}
-                    </li>    
-                </ul>
-                    </a>
+            `<div id='${element.properties.stopID}' class='button_popup fl w-100 '>
+                <a data-oid = '${element.properties.objectid}'
+                    class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
+                    <ul>
+                        <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.stopID}
+                        </li>
+                        <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.stopName}
+                        </li>    
+                    </ul>
+                </a>
             </div>`;
     });
 };
@@ -145,7 +128,7 @@ const getAssessments = (url) => {
 
 const getIssues = async () => {
     list_div.innerHTML = "Data is loading...";
-    const whatever = async () => {
+    const crossRef = async () => {
         let list = [];
         assessments['failed'].forEach(async item => {
             await get_survey_data(await jsonURL(item))
@@ -155,7 +138,7 @@ const getIssues = async () => {
         })
         return await list;
     };
-    whatever().then(async data => {
+    crossRef().then(async data => {
         let div = '';
         setTimeout(async () => {
             await data.forEach(async (element) => {
