@@ -53,10 +53,15 @@ ul {
   width: 700px;
   margin-left: -350px;
 }
-#notification {
+.badge {
   position: relative;
   top: 25px;
+}
+.left {
   left: 30px;
+}
+.right {
+  right: 30px;
 }
 #delete {
   background-image: url("assets/delete.svg");

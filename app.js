@@ -125,6 +125,7 @@ const getAssessments = (url) => {
             } else if (el.attributes.approved == "yes" ) {
                 assessments['approved'].push(el.attributes.stopID);
             } else if (el.attributes.approved == null) {
+                document.getElementById('mailbox-icon').src = 'assets/mailbox2.svg';
                 assessments['pending'].push(el.attributes.stopID);
             }
         })
@@ -179,6 +180,7 @@ const clickEvent = async (event) => {
     const iframe = event.target.closest("#iframe");
     const search = event.target.closest("#search");
     const notification = event.target.closest('#notification-icon');
+    const mailbox = event.target.closest('#mailbox-icon');
     console.log(event)
 
     if (((event.type == "submit" && event.target.closest('#form-search'))
@@ -191,14 +193,17 @@ const clickEvent = async (event) => {
   }
 
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
-    if (!iframe && iframe_exists) {
+    else if (!iframe && iframe_exists) {
         // CLOSE IFRAME
         iframe_exists.parentNode.removeChild(iframe_exists);
         return;
 
     } else if (notification) {
         getIssues('failed');
-
+        return;
+    } else if (mailbox) {
+        getIssues('pending');
+        return;
     // SEARCH CLICK!!!
     } else if (search) {
         if (stop_search != "") {
