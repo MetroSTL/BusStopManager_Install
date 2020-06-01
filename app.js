@@ -63,11 +63,11 @@ const clear_data = async () => {
 
 // uses assessment status and returns color for css
 const setStatus = (stop) => {
-    if (assessments['failed'].includes(String(stop.properties.STP_ID))) {
+    if (assessments['failed'].includes(String(stop.properties.stopID))) {
         return 'red';
-    } else if (assessments['approved'].includes(String(stop.properties.STP_ID))) {
+    } else if (assessments['approved'].includes(String(stop.properties.stopID))) {
         return 'green';
-    } else if (assessments['pending'].includes(String(stop.properties.STP_ID))) {
+    } else if (assessments['pending'].includes(String(stop.properties.stopID))) {
         return 'yellow';
     } else {
         return 'blue'
@@ -90,7 +90,12 @@ const render = async function(d){
     await sorted_data.forEach((element) => {
         list_div.innerHTML +=
             `<div id='${element.properties.stopID}' class='button_popup fl w-100 '>
-                <a data-oid = '${element.properties.objectid}'
+                <a
+                    data-oid = '${element.properties.objectid}'
+                    data-assessStatus = '${element.properties.approved}'
+                    data-approvalComments = '${element.properties.approvalComments }'
+
+
                     class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
                     <ul>
                         <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.stopID}
