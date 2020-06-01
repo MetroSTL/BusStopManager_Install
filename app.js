@@ -131,11 +131,11 @@ const getAssessments = (url) => {
     });
 };
 
-const getIssues = async () => {
+const getIssues = async (type) => {
     list_div.innerHTML = "Data is loading...";
     const crossRef = async () => {
         let list = [];
-        assessments['failed'].forEach(async item => {
+        assessments[type].forEach(async item => {
             await get_survey_data(await jsonURL(item))
                 .then(data => {
                     list.push(data[0]);
@@ -149,34 +149,22 @@ const getIssues = async () => {
             await data.forEach(async (element) => {
                 list_div.innerHTML = ''
                 list_div.innerHTML +=
-                    `<div id='${element.properties.STP_ID}' class='button_popup fl w-100 '>
-                        <a 
-                            data-stopID = '${element.properties.STP_ID}'
-                            data-onSt = '${element.properties.ON_ST}'
-                            data-atSt = '${element.properties.AT_ST}'
-                            data-stopName = '${element.properties.STP_NAME}'
-                            data-installInfo = '${element.properties.LocChange}'
-                            data-routes = '${element.properties.ROUTES}'
-                            data-tParkPoles ='${element.properties.TParkPoles}'
-                            data-tParkSigns = '${element.properties.TNPSigns}'
-                            data-busStopPole = '${element.properties.TStopPoles}'
-                            data-instPos = '${element.properties.InstPos}'
-                            data-stdInstLoc = '${element.properties.StdInLoc}'
-                            data-parkSignRear = '${element.properties.NPSign1}'
-                            data-parkSignNSFront = '${element.properties.NPSign2}'
-                            data-parkSignMBFront = '${element.properties.NPSign3}'
-                            data-parkSignFarside = '${element.properties.NPSign4}'
-                            data-gpsLat = '${element.geometry.coordinates[0]}'
-                            data-gpsLon = '${element.geometry.coordinates[1]}'
+                `<div id='${element.properties.stopID}' class='button_popup fl w-100 '>
+                    <a
+                        data-oid = '${element.properties.objectid}'
+                        data-assessStatus = '${element.properties.approved}'
+                        data-approvalComments = '${element.properties.approvalComments }'
+    
+    
                         class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
                         <ul>
-                            <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.STP_ID}
+                            <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.stopID}
                             </li>
-                            <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.STP_NAME}
+                            <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.stopName}
                             </li>    
                         </ul>
-                            </a>
-                    </div>`;
+                    </a>
+                </div>`;
                 return await div;
             })
             
@@ -190,11 +178,16 @@ const clickEvent = async (event) => {
     stop_search = document.getElementById("search").value;
     const iframe = event.target.closest("#iframe");
     const search = event.target.closest("#search");
-    const notification = event.target.closest('#notification-icon')
+    const notification = event.target.closest('#notification-icon');
+    console.log(event)
 
-  if (event.type == "submit" && !iframe_exists) {
-    searching(jsonURL(stop_search));
-    return;
+    if (((event.type == "submit" && event.target.closest('#form-search'))
+        ||
+        (event.type == 'click' && event.target.closest('#search')))
+        && stop_search != ""
+        && !iframe_exists) {
+            searching(jsonURL(stop_search));
+            return;
   }
 
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
@@ -204,7 +197,7 @@ const clickEvent = async (event) => {
         return;
 
     } else if (notification) {
-        getIssues();
+        getIssues('failed');
 
     // SEARCH CLICK!!!
     } else if (search) {
