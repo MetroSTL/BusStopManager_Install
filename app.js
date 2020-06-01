@@ -63,18 +63,51 @@ const clear_data = async () => {
 
 // uses assessment status and returns color for css
 const setStatus = (stop) => {
+    let obj;
     if (assessments['failed'].includes(String(stop.properties.stopID))) {
-        return 'red';
+        obj ={
+            color: 'red',
+            link: '',
+        };
     } else if (assessments['approved'].includes(String(stop.properties.stopID))) {
-        return 'green';
+        obj ={
+            color: 'green',
+            link: '',
+        };
     } else if (assessments['pending'].includes(String(stop.properties.stopID))) {
-        return 'yellow';
+        obj ={
+            color: 'yellow',
+            link: '',
+        };
     } else {
-        return 'blue'
+        obj = {
+            color: 'blue',
+            link: '',
+        }
     }
+    let base =
+        `<div id='${stop.properties.stopID}' class='button_popup fl w-100 '>
+            <a
+                data-objectid = '${stop.properties.objectid}'
+                data-globalid = '${stop.properties.globalid}'
+                data-stopid = '${stop.properties.stopID}'
+                data-assessStatus = '${stop.properties.approved}'
+                data-approvalComments = '${stop.properties.approvalComments}'
+
+                class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
+                <ul>
+                    <li class='f3 helvetica'><b>Stop ID:</b> ${stop.properties.stopID}
+                    </li>
+                    <li class='f3 helvetica'><b>Stop Name:</b> ${stop.properties.stopName}
+                    </li>    
+                </ul>
+            </a>
+        </div>`;
+    return base;
 }
 
-const render = async function(d){
+const render = async function (d) {
+    console.log(d);
   // SORTED DATA BY stop NUMBER
     const sorted_data = await d.sort(function (a, b) {
         if (a.properties.stopID < b.properties.stopID) {
@@ -88,28 +121,14 @@ const render = async function(d){
 
     list_div.innerHTML = "";
     await sorted_data.forEach((element) => {
-        list_div.innerHTML +=
-            `<div id='${element.properties.stopID}' class='button_popup fl w-100 '>
-                <a
-                    data-oid = '${element.properties.objectid}'
-                    data-assessStatus = '${element.properties.approved}'
-                    data-approvalComments = '${element.properties.approvalComments }'
-
-
-                    class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
-                    <ul>
-                        <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.stopID}
-                        </li>
-                        <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.stopName}
-                        </li>    
-                    </ul>
-                </a>
-            </div>`;
+        list_div.innerHTML += setStatus(element);
     });
 };
 
+const dataLoading =  '<h2 class="i">Data is loading...</h2>';
+
 const searching = (stop_search) => {
-  list_div.innerHTML = "Data is loading...";
+  list_div.innerHTML = dataLoading;
   get_survey_data(stop_search).then((data) => {
     render(data);
     searchData = data;
@@ -133,7 +152,7 @@ const getAssessments = (url) => {
 };
 
 const getIssues = async (type) => {
-    list_div.innerHTML = "Data is loading...";
+    list_div.innerHTML = dataLoading;
     const crossRef = async () => {
         let list = [];
         assessments[type].forEach(async item => {
@@ -149,23 +168,7 @@ const getIssues = async (type) => {
         setTimeout(async () => {
             await data.forEach(async (element) => {
                 list_div.innerHTML = ''
-                list_div.innerHTML +=
-                `<div id='${element.properties.stopID}' class='button_popup fl w-100 '>
-                    <a
-                        data-oid = '${element.properties.objectid}'
-                        data-assessStatus = '${element.properties.approved}'
-                        data-approvalComments = '${element.properties.approvalComments }'
-    
-    
-                        class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${setStatus(element)}'>
-                        <ul>
-                            <li class='f3 helvetica'><b>Stop ID:</b> ${element.properties.stopID}
-                            </li>
-                            <li class='f3 helvetica'><b>Stop Name:</b> ${element.properties.stopName}
-                            </li>    
-                        </ul>
-                    </a>
-                </div>`;
+                list_div.innerHTML += setStatus(element);
                 return await div;
             })
             
@@ -181,7 +184,46 @@ const clickEvent = async (event) => {
     const search = event.target.closest("#search");
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
-    console.log(event)
+
+    console.log(event);
+
+    let item = event.target.closest(".openpop");
+    let url = () => {
+        let link = `https://survey123.arcgis.com/share/${surveyID()}`;
+        if(item == null){ 
+            return;
+        }else if (assessments['failed'].includes(String(item.dataset.stopid))) {
+            link += `?mode=edit&objectId=${item.dataset.objectid}`
+            console.log('dataset:', item.dataset)
+
+        } else if (assessments['pending'].includes(String(item.dataset.stopid))) {
+            link += `?mode=edit&objectId=${item.dataset.objectid}`
+        } else if (assessments['approved'].includes(String(item.dataset.stopid))) {
+            link = '';
+        } else {
+            link += `?field:stopID=${item.dataset.stopid}
+                &field:onSt=${item.dataset.onst} 
+                &field:atSt=${item.dataset.atst} 
+                &field:stopName=${item.dataset.stopname} 
+                &field:installInfo=${item.dataset.installinfo} 
+                &field:routes=${item.dataset.routes} 
+                &field:tParkPoles=${item.dataset.tparkpoles} 
+                &field:tParkSigns=${item.dataset.tparksigns} 
+                &field:installSurface=${item.dataset.installsurface}
+                &field:installBusStopPole=${item.dataset.installpole == "0" ? "no" : "yes"}
+                &field:assignedPos=${item.dataset.instpos} 
+                &field:parkSignRear=${item.dataset.parksignrear} 
+                &field:parkSignNSFront=${item.dataset.parksignnsfront} 
+                &field:parkSignMBFront=${item.dataset.parksignmbfront} 
+                &field:parkSignFarside=${item.dataset.parksignfarside} 
+                &field:gpsLat${item.dataset.gpslat}
+                &field:gpsLat${item.dataset.gpslon}`;
+        }
+        return link;
+    };
+    let href = url();
+    console.log(href);
+
 
     if (((event.type == "submit" && event.target.closest('#form-search'))
         ||
@@ -190,8 +232,7 @@ const clickEvent = async (event) => {
         && !iframe_exists) {
             searching(jsonURL(stop_search));
             return;
-  }
-
+    }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
         // CLOSE IFRAME
@@ -207,47 +248,23 @@ const clickEvent = async (event) => {
     // SEARCH CLICK!!!
     } else if (search) {
         if (stop_search != "") {
-        searching(stop_search);
+            searching(stop_search);
         } else if (stop_search == "" && filtered) {
-        render(vehicles);
+            render(vehicles);
         return;
         }
         // CLICK LIST ELEMENT AND OPEN IFRAME!!!
-    } else if (event.target.closest(".openpop")) {
-        let item = event.target.closest(".openpop");
-        console.log(item);
-        console.log(item.dataset);
+    } else if (event.target.closest(".openpop") && href != "") {
 
-    let url = `https://survey123.arcgis.com/share/${surveyID()}?field:stopID=${
-      item.dataset.stopid
-    }
-                    &field:onSt=${item.dataset.onst} 
-                    &field:atSt=${item.dataset.atst} 
-                    &field:stopName=${item.dataset.stopname} 
-                    &field:installInfo=${item.dataset.installinfo} 
-                    &field:routes=${item.dataset.routes} 
-                    &field:tParkPoles=${item.dataset.tparkpoles} 
-                    &field:tParkSigns=${item.dataset.tparksigns} 
-                    &field:installSurface=${item.dataset.installsurface}
-                    &field:installBusStopPole=${
-                      item.dataset.installpole == "0" ? "no" : "yes"
-                    }
-                    &field:assignedPos=${item.dataset.instpos} 
-                    &field:parkSignRear=${item.dataset.parksignrear} 
-                    &field:parkSignNSFront=${item.dataset.parksignnsfront} 
-                    &field:parkSignMBFront=${item.dataset.parksignmbfront} 
-                    &field:parkSignFarside=${item.dataset.parksignfarside} 
-                    &field:gpsLat${item.dataset.gpslat}
-                    &field:gpsLat${item.dataset.gpslon}`;
-    const ifrm = document.createElement("iframe");
-    const el = document.getElementById("marker");
-    const main = document.querySelector("#main");
+        const ifrm = document.createElement("iframe");
+        const el = document.getElementById("marker");
+        const main = document.querySelector("#main");
 
-    ifrm.setAttribute("id", "ifrm"); // assign an id
-    ifrm.setAttribute(`src`, url);
+        ifrm.setAttribute("id", "ifrm"); // assign an id
+        ifrm.setAttribute(`src`, href);
 
-    main.parentNode.insertBefore(ifrm, el);
-    return;
+        main.parentNode.insertBefore(ifrm, el);
+        return;
   }
 };
 
