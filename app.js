@@ -63,20 +63,21 @@ const clear_data = async () => {
 
 // uses assessment status and returns color for css
 const setStatus = (stop, version) => {
+    console.log(stop)
     let obj;
-    if (version == 'assessment') {
-        if (assessments['failed'].includes(String(stop.properties.stopID))) {
-            obj ={
+    if (version == 'assess') {
+        if (assessments['failed'].includes(String(stop.attributes.stopID))) {
+            obj = {
                 color: 'red',
                 link: '',
             };
-        } else if (assessments['approved'].includes(String(stop.properties.stopID))) {
-            obj ={
+        } else if (assessments['approved'].includes(String(stop.attributes.stopID))) {
+            obj = {
                 color: 'green',
                 link: '',
             };
-        } else if (assessments['pending'].includes(String(stop.properties.stopID))) {
-            obj ={
+        } else if (assessments['pending'].includes(String(stop.attributes.stopID))) {
+            obj = {
                 color: 'orange',
                 link: '',
             };
@@ -85,40 +86,41 @@ const setStatus = (stop, version) => {
                 color: 'blue',
                 link: '',
             }
-        }
+        };
+
         let base =
-            `<div id='${stop.properties.stopID}' class='button_popup fl w-100 '>
+            `<div id='${stop.attributes.stopID}' class='button_popup fl w-100 '>
                 <a
-                    data-objectid = '${stop.properties.objectid}'
-                    data-globalid = '${stop.properties.globalid}'
-                    data-stopid = '${stop.properties.stopID}'
-                    data-assessStatus = '${stop.properties.approved}'
-                    data-approvalComments = '${stop.properties.approvalComments}'
+                    data-objectid = '${stop.attributes.objectid}'
+                    data-globalid = '${stop.attributes.globalid}'
+                    data-stopid = '${stop.attributes.stopID}'
+                    data-assessStatus = '${stop.attributes.approved}'
+                    data-approvalComments = '${stop.attributes.approvalComments}'
     
                     class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
                     <ul>
-                        <li class='f3 helvetica'><b>Stop ID:</b> ${stop.properties.stopID}
+                        <li class='f3 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
                         </li>
-                        <li class='f3 helvetica'><b>Stop Name:</b> ${stop.properties.stopName}
+                        <li class='f3 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
                         </li>    
                     </ul>
                 </a>
             </div>`;
-        return base;        
+        return base;
     }
-    else {
+    else if (version == "master") {
         if (assessments['failed'].includes(String(stop.properties.STP_ID))) {
-            obj ={
+            obj = {
                 color: 'red',
                 link: '',
             };
         } else if (assessments['approved'].includes(String(stop.properties.STP_ID))) {
-            obj ={
+            obj = {
                 color: 'green',
                 link: '',
             };
         } else if (assessments['pending'].includes(String(stop.properties.STP_ID))) {
-            obj ={
+            obj = {
                 color: 'orange',
                 link: '',
             };
@@ -129,39 +131,38 @@ const setStatus = (stop, version) => {
             }
         }
         let base =
-                `<div id='${stop.properties.STP_ID}' class='button_popup fl w-100 '>
-                <a 
-                    data-stopID = '${stop.properties.STP_ID}'
-                    data-onSt = '${stop.properties.ON_ST}'
-                    data-atSt = '${stop.properties.AT_ST}'
-                    data-stopName = '${stop.properties.STP_NAME}'
-                    data-installInfo = '${stop.properties.LocChange}'
-                    data-routes = '${stop.properties.ROUTES}'
-                    data-tParkPoles ='${stop.properties.TParkPoles}'
-                    data-tParkSigns = '${stop.properties.TNPSigns}'
-                    data-busStopPole = '${stop.properties.TStopPoles}'
-                    data-instPos = '${stop.properties.InstPos}'
-                    data-stdInstLoc = '${stop.properties.StdInLoc}'
-                    data-parkSignRear = '${stop.properties.NPSign1}'
-                    data-parkSignNSFront = '${stop.properties.NPSign2}'
-                    data-parkSignMBFront = '${stop.properties.NPSign3}'
-                    data-parkSignFarside = '${stop.properties.NPSign4}'
-                    data-gpsLat = '${stop.geometry.coordinates[0]}'
-                    data-gpsLon = '${stop.geometry.coordinates[1]}'
-                class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
-                <ul>
-                    <li class='f3 helvetica'><b>Stop ID:</b> ${stop.properties.STP_ID}
-                    </li>
-                    <li class='f3 helvetica'><b>Stop Name:</b> ${stop.properties.STP_NAME}
-                    </li>    
-                </ul>
+            `<div id='${stop.properties.STP_ID}' class='button_popup fl w-100 '>
+                    <a 
+                        data-stopID = '${stop.properties.STP_ID}'
+                        data-onSt = '${stop.properties.ON_ST}'
+                        data-atSt = '${stop.properties.AT_ST}'
+                        data-stopName = '${stop.properties.STP_NAME}'
+                        data-installInfo = '${stop.properties.LocChange}'
+                        data-routes = '${stop.properties.ROUTES}'
+                        data-tParkPoles ='${stop.properties.TParkPoles}'
+                        data-tParkSigns = '${stop.properties.TNPSigns}'
+                        data-busStopPole = '${stop.properties.TStopPoles}'
+                        data-instPos = '${stop.properties.InstPos}'
+                        data-stdInstLoc = '${stop.properties.StdInLoc}'
+                        data-parkSignRear = '${stop.properties.NPSign1}'
+                        data-parkSignNSFront = '${stop.properties.NPSign2}'
+                        data-parkSignMBFront = '${stop.properties.NPSign3}'
+                        data-parkSignFarside = '${stop.properties.NPSign4}'
+                        data-gpsLat = '${stop.geometry.coordinates[0]}'
+                        data-gpsLon = '${stop.geometry.coordinates[1]}'
+                        class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
+                        
+                        <ul>
+                            <li class='f3 helvetica'><b>Stop ID:</b> ${stop.properties.STP_ID}</li>
+                            <li class='f3 helvetica'><b>Stop Name:</b> ${stop.properties.STP_NAME}</li>    
+                        </ul>
                     </a>
             </div>`;
         return base;
-        }
     }
+};
 
-const render = async function (d) {
+const render = async function (d, version) {
     console.log(d);
   // SORTED DATA BY stop NUMBER
     const sorted_data = await d.sort(function (a, b) {
@@ -175,18 +176,25 @@ const render = async function (d) {
     });
 
     list_div.innerHTML = "";
-    await sorted_data.forEach((element) => {
-        list_div.innerHTML += setStatus(element);
-    });
+    if (version == "assess") {
+        await sorted_data.forEach((element) => {
+            list_div.innerHTML += setStatus(element, 'assess');
+        });
+    } else {
+        await sorted_data.forEach((element) => {
+            list_div.innerHTML += setStatus(element, 'master');
+        });
+        
+    }
+    
 };
 
 const dataLoading =  '<h2 class="i">Data is loading...</h2>';
 
-const searching = (stop_search) => {
-    console.log(stop_search)
-  list_div.innerHTML = dataLoading;
-  get_survey_data(stop_search).then((data) => {
-    render(data);
+const searching = (stop_search, version) => {
+    list_div.innerHTML = dataLoading;
+    get_survey_data(stop_search).then((data) => {
+    render(data, version);
     searchData = data;
   });
 };
@@ -224,7 +232,7 @@ const getIssues = async (type) => {
         setTimeout(async () => {
             await data.forEach(async (element) => {
                 list_div.innerHTML = ''
-                list_div.innerHTML += setStatus(element);
+                list_div.innerHTML += setStatus(element, 'assess');
                 return await div;
             })
             
@@ -241,8 +249,6 @@ const clickEvent = async (event) => {
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
 
-    console.log(event);
-
     let item = event.target.closest(".openpop");
     
     if (((event.type == "submit" && event.target.closest('#form-search'))
@@ -250,7 +256,7 @@ const clickEvent = async (event) => {
         (event.type == 'click' && event.target.closest('#search')))
         && stop_search != ""
         && !iframe_exists) {
-            searching(jsonURL(stop_search).master);
+            searching(jsonURL(stop_search).master, "master");
             return;
     }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
@@ -266,29 +272,22 @@ const clickEvent = async (event) => {
         getIssues('pending');
         return;
     // SEARCH CLICK!!!
-    } else if (search) {
-        if (stop_search != "") {
-            searching(stop_search);
-        } else if (stop_search == "" && filtered) {
-            render(vehicles);
-        return;
-        }
+    // } else if (search) {
+    //     if (stop_search != "") {
+    //         searching(stop_search, 'master');
+    //     } 
         // CLICK LIST ELEMENT AND OPEN IFRAME!!!
-    } else if (event.target.closest(".openpop") && href != "") {
+    } else if (event.target.closest(".openpop")) {
         let url = () => {
             let link = ``;
-            if(item == null){ 
-                return;
-            }else if (assessments['failed'].includes(String(item.dataset.stopid))) {
-                link += `?mode=edit&objectId=${item.dataset.objectid}`
-                console.log('dataset:', item.dataset)
-    
-            } else if (assessments['pending'].includes(String(item.dataset.stopid))) {
-                link += `?mode=edit&objectId=${item.dataset.objectid}`
+            if (assessments['failed'].includes(String(item.dataset.stopid))
+                        ||
+                    assessments['pending'].includes(String(item.dataset.stopid))) {
+                link += `https://survey123.arcgis.com/share/${surveyID()}?mode=edit&objectId=${item.dataset.objectid}`    
             } else if (assessments['approved'].includes(String(item.dataset.stopid))) {
                 link = '';
             } else {
-                link += `https://survey123.arcgis.com/share/${surveyID().install}
+                link += `https://survey123.arcgis.com/share/${surveyID()}
                     ?field:stopID=${item.dataset.stopid}
                     &field:onSt=${item.dataset.onst} 
                     &field:atSt=${item.dataset.atst} 
@@ -311,6 +310,9 @@ const clickEvent = async (event) => {
         };
         let href = url();
         console.log(href);
+        if (href == "") {
+            return;
+        }
 
         const ifrm = document.createElement("iframe");
         const el = document.getElementById("marker");
