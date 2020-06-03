@@ -182,7 +182,12 @@ const render = async function (d, version) {
         });
     } else {
         await sorted_data.forEach((element) => {
-            list_div.innerHTML += setStatus(element, 'master');
+            if(assessments['failed'].includes(String(item.dataset.stopid)) ||
+                assessments['pending'].includes(String(item.dataset.stopid))) {
+                    list_div.innerHTML += ''
+            } else {
+                list_div.innerHTML += setStatus(element, 'master');
+                }
         });
         
     }
@@ -280,12 +285,12 @@ const clickEvent = async (event) => {
     } else if (event.target.closest(".openpop")) {
         let url = () => {
             let link = ``;
-            if (assessments['failed'].includes(String(item.dataset.stopid))
-                        ||
-                    assessments['pending'].includes(String(item.dataset.stopid))) {
+            if (assessments['failed'].includes(String(item.dataset.stopid)) ||
+                assessments['pending'].includes(String(item.dataset.stopid))) {
                 link += `https://survey123.arcgis.com/share/${surveyID()}?mode=edit&objectId=${item.dataset.objectid}`    
             } else if (assessments['approved'].includes(String(item.dataset.stopid))) {
                 link = '';
+
             } else {
                 link += `https://survey123.arcgis.com/share/${surveyID()}
                     ?field:stopID=${item.dataset.stopid}
