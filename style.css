@@ -4,7 +4,8 @@ body {
 }
 #top-bar {
   height: 80px;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 #top-bar img {
@@ -20,7 +21,8 @@ body {
 }
 .center,
 .center a,
-.center button {
+.center button
+.center div {
   display: flex;
   align-items: center;
   justify-content: center;
