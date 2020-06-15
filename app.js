@@ -1,4 +1,4 @@
-import { jsonURL, surveyID, surveyData } from "./private.js";
+import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 
 
 // todo:change url based on status
@@ -129,6 +129,7 @@ const dataLoading =  '<h2 class="i">Data is loading...</h2>';
 // search and render stops (generic function)
 const searching = (stop_search, version) => {
     list_div.innerHTML = dataLoading;
+    console.log(stop_search)
     get_survey_data(stop_search).then((data) => {
     render(data, version);
   });
@@ -138,6 +139,7 @@ const searching = (stop_search, version) => {
 const getAssessments = (url) => {
     get_survey_data(url).then((data) => { 
         console.log(data.length)
+        console.log(data)
         data.forEach(el => {
             // install has not been filled out
             if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
@@ -203,9 +205,14 @@ const clickEvent = async (event) => {
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
     const completed = event.target.closest('#completed-icon');
+    var signInButton = document.getElementById('sign-in');
+
 
     let item = event.target.closest(".openpop");
-    
+    // if (signInButton) {
+    //     window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
+
+    // }
     if (((event.type == "submit" && event.target.closest('#form-search'))
         ||
         (event.type == 'click' && event.target.closest('#search')))
@@ -232,7 +239,7 @@ const clickEvent = async (event) => {
 
         // CLICK LIST ELEMENT AND OPEN IFRAME!!!
     } else if (event.target.closest(".openpop")) {
-        let url = () => `https://survey123.arcgis.com/share/${surveyID()}?mode=edit&objectId=${item.dataset.objectid}`; 
+        let url = () => `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`; 
             
         let href = url();
         console.log(href);
