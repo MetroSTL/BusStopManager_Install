@@ -224,7 +224,16 @@ const clickEvent = async (event) => {
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
         // CLOSE IFRAME
-        iframe_exists.parentNode.removeChild(iframe_exists);
+        const iframeSource = document.getElementById("ifrm").src;
+        if (iframeSource.includes('https://survey123.arcgis.com/share/5e2cad9331d3458583bea6da5f19e488?mode=edit')) {
+            console.log('closed without saving')
+            const conf = confirm('Are you sure you want to close the survey without saving?')
+            if (conf == true) {
+                iframe_exists.parentNode.removeChild(iframe_exists);
+            } else {
+                return;
+            }
+        }
         return;
 
     } else if (notification) {
