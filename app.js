@@ -205,15 +205,16 @@ const clickEvent = async (event) => {
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
     const completed = event.target.closest('#completed-icon');
-    var signInButton = document.getElementById('sign-in');
+    var signInButton = event.target.closest('#sign-in-icon');
 
-
+    console.log(event);
     let item = event.target.closest(".openpop");
-    // if (signInButton) {
-    //     window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
-
-    // }
-    if (((event.type == "submit" && event.target.closest('#form-search'))
+    if (signInButton) {
+        window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
+        console.log('sign in')
+        return;
+    }
+    else if (((event.type == "submit" && event.target.closest('#form-search'))
         ||
         (event.type == 'click' && event.target.closest('#search')))
         && stop_search != ""
@@ -221,13 +222,16 @@ const clickEvent = async (event) => {
             searching(jsonURL(stop_search).assess);
             return;
     }
+    // else if (event.target.closest('#validate-form')) {
+    //     iframe_exists.parentNode.removeChild(iframe_exists);
+    // }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
         // CLOSE IFRAME
         const iframeSource = document.getElementById("ifrm").src;
         if (iframeSource.includes('https://survey123.arcgis.com/share/5e2cad9331d3458583bea6da5f19e488?mode=edit')) {
             console.log('closed without saving')
-            const conf = confirm('Are you sure you want to close the survey without saving?')
+            const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
             if (conf == true) {
                 iframe_exists.parentNode.removeChild(iframe_exists);
             } else {
