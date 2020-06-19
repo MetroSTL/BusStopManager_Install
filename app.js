@@ -224,9 +224,7 @@ const clickEvent = async (event) => {
     // expand buttons
     else if (event.target.closest('.accordion-toggle')) {
         // Get the target content
-        console.log('here')
         var content = document.querySelector(event.target.closest('.accordion-toggle').hash);
-        console.log(content);
         if (!content) {
             console.log('not content')
             return;
@@ -257,24 +255,21 @@ const clickEvent = async (event) => {
             searching(jsonURL(stop_search).assess);
             return;
     }
-    // else if (event.target.closest('#validate-form')) {
-    //     iframe_exists.parentNode.removeChild(iframe_exists);
-    // }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
-        // CLOSE IFRAME
+        // CONFIRM AND CLOSE IFRAME
+        console.log('here')
         const iframeSource = document.getElementById("ifrm").src;
-        if (iframeSource.includes('https://survey123.arcgis.com/share/5e2cad9331d3458583bea6da5f19e488?mode=edit')) {
-            console.log('closed without saving')
-            const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
-            if (conf == true) {
-                iframe_exists.parentNode.removeChild(iframe_exists);
-            } else {
-                return;
-            }
+        const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
+        
+        if (conf == true) {
+            iframe_exists.parentNode.removeChild(iframe_exists);
+        } else {
+            return;
         }
         return;
 
+    // render filtered completed surveys (failed, pending, approved)
     } else if (notification) {
         getIssues('failed');
         return;
@@ -285,12 +280,20 @@ const clickEvent = async (event) => {
         getIssues('approved');
         return;
 
-        // CLICK LIST ELEMENT AND OPEN IFRAME!!!
+    // CLICK LIST ELEMENT AND OPEN IFRAME!!!
     } else if (event.target.closest(".openpop")) {
-        let url = () => `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`; 
+
+        let url = () => {
+            if (event.target.closest('.dig')) {
+                return `https://survey123.arcgis.com/share/${surveyID().dig}`
+            }
+            else {
+                return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`;
+            }
+
+        };
             
         let href = url();
-        console.log(href);
         if (href == "") {
             return;
         }
