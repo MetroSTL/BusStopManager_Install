@@ -109,3 +109,22 @@ ul {
 .question p {
   font-size: 50px;
 }
+
+
+
+/* accordian */
+.accordion-toggle {
+  display: flex;
+  flex-direction: row;
+}
+.accordion-toggle a {
+  width: 50%;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.active {
+  display: block;
+}

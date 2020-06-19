@@ -82,21 +82,27 @@ const setStatus = (stop) => {
             }
         };
 
-        return `<div id='${stop.attributes.stopID}' class='button_popup fl w-100 '>
-                    <a
-                        data-objectid = '${stop.attributes.objectid}'
-                        data-globalid = '${stop.attributes.globalid}'
-                        data-stopid = '${stop.attributes.stopID}'
-                        data-assessStatus = '${stop.attributes.approved}'
-                        data-approvalComments = '${stop.attributes.approvalComments}'
-        
-                        class='openpop center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
-                        <ul>
-                            <li class='f3 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
-                            </li>
-                            <li class='f3 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
-                            </li>    
-                        </ul>
+        return `<a href="#details-${stop.attributes.stopID}"
+                    data-objectid = '${stop.attributes.objectid}'
+                    data-globalid = '${stop.attributes.globalid}'
+                    data-stopid = '${stop.attributes.stopID}'
+                    data-assessStatus = '${stop.attributes.approved}'
+                    data-approvalComments = '${stop.attributes.approvalComments}'
+
+                    class='button_popup accordion-toggle center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
+                    <ul>
+                        <li class='f3 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
+                        </li>
+                        <li class='f3 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
+                        </li>    
+                    </ul>
+                </a>
+                <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
+                    <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}">
+                        Assessment/Install
+                    </a>
+                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange">
+                        Dig Survey
                     </a>
                 </div>`;
 
@@ -137,23 +143,24 @@ const searching = (stop_search, version) => {
 
 // adds stop id's to pending, approved, or failed lists
 const getAssessments = (url) => {
-    get_survey_data(url).then((data) => { 
-        console.log(data.length)
-        console.log(data)
-        data.forEach(el => {
-            // install has not been filled out
-            if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
-                assessments['failed'].push(el.attributes.stopID);
-            // if install was approved
-            } else if (el.attributes.approved == "yes" ) {
-                assessments['approved'].push(el.attributes.stopID);
-            // if stop is pending approval
-            } else if (el.attributes.approved == null && el.attributes.installToSpec != null) {
-                console.log(el.attributes.installToSpec)
-                assessments['pending'].push(el.attributes.stopID);
-
-            }
-        })
+    console.log(url)
+    get_survey_data(url)
+        .then((data) => { 
+            console.log(data.length)
+            console.log(data)
+            data.forEach(el => {
+                // install has not been filled out
+                if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
+                    assessments['failed'].push(el.attributes.stopID);
+                // if install was approved
+                } else if (el.attributes.approved == "yes" ) {
+                    assessments['approved'].push(el.attributes.stopID);
+                // if stop is pending approval
+                } else if (el.attributes.approved == null && el.attributes.installToSpec != null) {
+                    console.log(el.attributes.installToSpec)
+                    assessments['pending'].push(el.attributes.stopID);
+                }
+            })
         return assessments
     }).then(assessments => {
         console.log(assessments);
@@ -213,6 +220,34 @@ const clickEvent = async (event) => {
         window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
         console.log('sign in')
         return;
+    }
+    // expand buttons
+    else if (event.target.closest('.accordion-toggle')) {
+        // Get the target content
+        console.log('here')
+        var content = document.querySelector(event.target.closest('.accordion-toggle').hash);
+        console.log(content);
+        if (!content) {
+            console.log('not content')
+            return;
+        }
+        
+        // If the content is already expanded, collapse it and quit
+        if (content.classList.contains('active')) {
+            console.log('remove active')
+            content.classList.remove('active');
+            return;
+        }
+        
+        // Get all open accordion content, loop through it, and close it
+        var accordions = document.querySelectorAll('.accordion-content.active');
+        for (var i = 0; i < accordions.length; i++) {
+
+            accordions[i].classList.remove('active');
+        }
+        
+        // Toggle our content
+        content.classList.toggle('active');
     }
     else if (((event.type == "submit" && event.target.closest('#form-search'))
         ||
