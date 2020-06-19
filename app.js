@@ -54,7 +54,6 @@ const clear_data = async () => {
 
 // uses assessment status and returns color for css
 const setStatus = (stop) => {
-    console.log(stop)
     let obj;
         // failed renders red
         if (assessments['failed'].includes(String(stop.attributes.stopID))) {
@@ -110,7 +109,6 @@ const setStatus = (stop) => {
 
 // sort and render stops from specified list
 const render = async function (d) {
-    console.log(d);
   // SORTED DATA BY stop NUMBER
     const sorted_data = await d.sort(function (a, b) {
         if (a.attributes.stopID < b.attributes.stopID) {
@@ -135,7 +133,6 @@ const dataLoading =  '<h2 class="i">Data is loading...</h2>';
 // search and render stops (generic function)
 const searching = (stop_search, version) => {
     list_div.innerHTML = dataLoading;
-    console.log(stop_search)
     get_survey_data(stop_search).then((data) => {
     render(data, version);
   });
@@ -143,11 +140,9 @@ const searching = (stop_search, version) => {
 
 // adds stop id's to pending, approved, or failed lists
 const getAssessments = (url) => {
-    console.log(url)
     get_survey_data(url)
         .then((data) => { 
-            console.log(data.length)
-            console.log(data)
+
             data.forEach(el => {
                 // install has not been filled out
                 if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
@@ -157,13 +152,11 @@ const getAssessments = (url) => {
                     assessments['approved'].push(el.attributes.stopID);
                 // if stop is pending approval
                 } else if (el.attributes.approved == null && el.attributes.installToSpec != null) {
-                    console.log(el.attributes.installToSpec)
                     assessments['pending'].push(el.attributes.stopID);
                 }
             })
         return assessments
     }).then(assessments => {
-        console.log(assessments);
         if (assessments.failed.length > 0) {
             document.getElementById('notification-icon').src = 'assets/notification2.svg';}
         if (assessments.pending.length > 0) {
@@ -214,11 +207,9 @@ const clickEvent = async (event) => {
     const completed = event.target.closest('#completed-icon');
     var signInButton = event.target.closest('#sign-in-icon');
 
-    console.log(event);
     let item = event.target.closest(".openpop");
     if (signInButton) {
         window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
-        console.log('sign in')
         return;
     }
     // expand buttons
@@ -226,13 +217,12 @@ const clickEvent = async (event) => {
         // Get the target content
         var content = document.querySelector(event.target.closest('.accordion-toggle').hash);
         if (!content) {
-            console.log('not content')
+            // kill it
             return;
         }
         
         // If the content is already expanded, collapse it and quit
         if (content.classList.contains('active')) {
-            console.log('remove active')
             content.classList.remove('active');
             return;
         }
@@ -258,7 +248,6 @@ const clickEvent = async (event) => {
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
         // CONFIRM AND CLOSE IFRAME
-        console.log('here')
         const iframeSource = document.getElementById("ifrm").src;
         const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
         
