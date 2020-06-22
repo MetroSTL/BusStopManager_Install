@@ -12,6 +12,7 @@ import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private
 //HTML SECTION SELECTORS
 const list_div = document.getElementById("list");
 let stop_search = document.getElementById("search").value;
+let signin = false
 
 // generic lists for putting list of stopID's
 let assessments = {
@@ -97,7 +98,12 @@ const setStatus = (stop) => {
                     </ul>
                 </a>
                 <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
-                    <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}">
+                    <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}"
+                    data-objectid = '${stop.attributes.objectid}'
+                    data-globalid = '${stop.attributes.globalid}'
+                    data-stopid = '${stop.attributes.stopID}'
+                    data-assessStatus = '${stop.attributes.approved}'
+                    data-approvalComments = '${stop.attributes.approvalComments}'>
                         Assessment/Install
                     </a>
                     <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange">
@@ -209,7 +215,9 @@ const clickEvent = async (event) => {
 
     let item = event.target.closest(".openpop");
     if (signInButton) {
-        window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id='+clientId+'&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
+    // if (signInButton || signin == false) {
+        window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
+        signin = true;
         return;
     }
     // expand buttons
@@ -271,7 +279,6 @@ const clickEvent = async (event) => {
 
     // CLICK LIST ELEMENT AND OPEN IFRAME!!!
     } else if (event.target.closest(".openpop")) {
-
         let url = () => {
             if (event.target.closest('.dig')) {
                 return `https://survey123.arcgis.com/share/${surveyID().dig}`
@@ -286,7 +293,6 @@ const clickEvent = async (event) => {
         if (href == "") {
             return;
         }
-
         const ifrm = document.createElement("iframe");
         const el = document.getElementById("marker");
         const main = document.querySelector("#main");
