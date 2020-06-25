@@ -123,6 +123,7 @@ ul {
 
 .accordion-content {
   display: none;
+  margin-bottom:20px;
 }
 
 .accordion-content.active {
