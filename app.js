@@ -80,7 +80,8 @@ const setStatus = (stop) => {
                 color: 'blue',
                 link: '',
             }
-        };
+    };
+    console.log(stop)
 
         return `<a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
@@ -106,7 +107,17 @@ const setStatus = (stop) => {
                     data-approvalComments = '${stop.attributes.approvalComments}'>
                         Assessment/Install
                     </a>
-                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange">
+                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange"
+                    data-stopid = '${stop.attributes.stopID}'
+                    data-stopname = '${stop.attributes.stopName}'
+                    data-stppos = '${stop.attributes.STP_P}'
+                    data-onst = '${stop.attributes.onSt}'}'
+                    data-atst = '${stop.attributes.atSt}'
+                    data-city = '${stop.attributes.JURIS}'
+                    data-county = '${stop.attributes.COUNTY}'
+                    data-state = '${stop.attributes.STATE}' 
+                    data-holes = '${stop.attributes.Tholes}'
+                    >
                         Dig Survey
                     </a>
                 </div>`;
@@ -278,10 +289,29 @@ const clickEvent = async (event) => {
         return;
 
     // CLICK LIST ELEMENT AND OPEN IFRAME!!!
+    // dataset: DOMStringMap(8)
+        // atst: "UNION BLVD"
+        // city: "ST LOUIS"
+        // county: "ST LOUIS CITY"
+        // holes: "0"
+        // onst: "WATERMAN BLVD"
+        // state: "MO"
+        // stopid: "15033"
+        // stppos: "NS"
+        
     } else if (event.target.closest(".openpop")) {
         let url = () => {
             if (event.target.closest('.dig')) {
-                return `https://survey123.arcgis.com/share/${surveyID().dig}`
+                return `https://survey123.arcgis.com/share/${surveyID().dig}
+                ?field:stop_id=${event.target.closest('.dig').dataset.stopid}
+                &field:stop_name=${event.target.closest('.dig').dataset.stopname}
+                &field:on_street=${event.target.closest('.dig').dataset.onst}
+                &field:at_street=${event.target.closest('.dig').dataset.atst}
+                &field:STP_P=${event.target.closest('.dig').dataset.stppos}
+                &field:city=${event.target.closest('.dig').dataset.city}
+                &field:county=${event.target.closest('.dig').dataset.county}
+                &field:_state=${event.target.closest('.dig').dataset.state}
+                &field:total_number_of_holes_at_stop=${event.target.closest('.dig').dataset.holes}`
             }
             else {
                 return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`;
@@ -290,6 +320,7 @@ const clickEvent = async (event) => {
         };
             
         let href = url();
+        console.log(href)
         if (href == "") {
             return;
         }
