@@ -19,6 +19,7 @@ let assessments = {
     failed: [],
     approved: [],
     pending: [],
+    dig: [],
 };
 
 //POLYFILLS
@@ -208,14 +209,13 @@ const getAssessments = (url) => {
 };
 
 // start of function for getting dig requests submitted
-const getDigRequests = (url) => {
-    get_survey_data(url)
-        .then(data => {
-            console.log("dig: ", data)
-            data.forEach(el => {
-                if(el.attributes.stopID)
-            })
-    })
+const getDigRequests = async (url) => {
+    let data = await get_survey_data(url);    
+    let dig_list = [];
+    let list = await data.forEach( async el => {        
+        console.log(el.attributes.stop_id);
+        assessments['dig'].push(parseInt(el.attributes.stop_id))
+    });
 }
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
