@@ -81,9 +81,33 @@ const setStatus = (stop) => {
                 link: '',
             }
     };
+
+    const cityCorrection = (juris) => {
+        let muni = {
+            'BELLERIVE': " ",
+            'CREVE COUER': 'CREVE COUER',
+            'O FALLON': " ",
+            'SAINT LOUIS COUNTY': " ",
+            'ST ANN': " ",
+            'ST GEORGE': " ",
+            'ST JOHN': " ",
+            'ST LOUIS': " ",
+            'ST LOUIS CITY': "ST. LOUIS CITY",
+            'ST LOUIS COUNTY': " ",
+        };
+
+        if (muni[juris]) {
+            return muni[juris];
+        } else {
+            return muni;
+        }
+
+    }
     console.log(stop)
 
-        return `<a href="#details-${stop.attributes.stopID}"
+    return `
+        //start of the data mapping for assessment / install survey / survey button 
+        <a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
                     data-globalid = '${stop.attributes.globalid}'
                     data-stopid = '${stop.attributes.stopID}'
@@ -98,25 +122,28 @@ const setStatus = (stop) => {
                         </li>    
                     </ul>
                 </a>
+
+                // start of the MO1CALL data mapping / survey button
                 <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
                     <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}"
-                    data-objectid = '${stop.attributes.objectid}'
-                    data-globalid = '${stop.attributes.globalid}'
-                    data-stopid = '${stop.attributes.stopID}'
-                    data-assessStatus = '${stop.attributes.approved}'
-                    data-approvalComments = '${stop.attributes.approvalComments}'>
+                        data-objectid = '${stop.attributes.objectid}'
+                        data-globalid = '${stop.attributes.globalid}'
+                        data-stopid = '${stop.attributes.stopID}'
+                        data-assessStatus = '${stop.attributes.approved}'
+                        data-approvalComments = '${stop.attributes.approvalComments}'
+                    >
                         Assessment/Install
                     </a>
                     <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange"
-                    data-stopid = '${stop.attributes.stopID}'
-                    data-stopname = '${stop.attributes.stopName}'
-                    data-stppos = '${stop.attributes.STP_P}'
-                    data-onst = '${stop.attributes.onSt}'}'
-                    data-atst = '${stop.attributes.atSt}'
-                    data-city = '${stop.attributes.JURIS}'
-                    data-county = '${stop.attributes.COUNTY}'
-                    data-state = '${stop.attributes.STATE}' 
-                    data-holes = '${stop.attributes.Tholes}'
+                        data-stopid = '${stop.attributes.stopID}'
+                        data-stopname = '${stop.attributes.stopName}'
+                        data-stppos = '${stop.attributes.STP_P}'
+                        data-onst = '${stop.attributes.onSt}'}'
+                        data-atst = '${stop.attributes.atSt}'
+                        data-city = '${cityCorrection(stop.attributes.JURIS)}'
+                        data-county = '${stop.attributes.COUNTY}'
+                        data-state = '${stop.attributes.STATE}' 
+                        data-holes = '${stop.attributes.Tholes}'
                     >
                         Dig Survey
                     </a>
@@ -159,7 +186,6 @@ const searching = (stop_search, version) => {
 const getAssessments = (url) => {
     get_survey_data(url)
         .then((data) => { 
-
             data.forEach(el => {
                 // install has not been filled out
                 if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
@@ -180,6 +206,17 @@ const getAssessments = (url) => {
             document.getElementById('mailbox-icon').src = 'assets/mailbox2.svg';}
     })
 };
+
+// start of function for getting dig requests submitted
+const getDigRequests = (url) => {
+    get_survey_data(url)
+        .then(data => {
+            console.log("dig: ", data)
+            data.forEach(el => {
+                if(el.attributes.stopID)
+            })
+    })
+}
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
 const getIssues = async (type) => {
@@ -337,6 +374,7 @@ const clickEvent = async (event) => {
 };
 
 clear_data();
-getAssessments(surveyData());
+getAssessments(surveyData().assess);
+getDigRequests(surveyData().dig)
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
