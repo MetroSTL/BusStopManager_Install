@@ -1,5 +1,6 @@
 import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 
+
 // todo:change url based on status
  // edit existing = if failed || pending find the stop id in surveyData()
  // set url to '' if approved
@@ -79,9 +80,34 @@ const setStatus = (stop) => {
                 color: 'blue',
                 link: '',
             }
+    };
+
+    const cityCorrection = (juris) => {
+        let muni = {
+            'BELLERIVE': " ",
+            'CREVE COUER': 'CREVE COUER',
+            'O FALLON': " ",
+            'SAINT LOUIS COUNTY': " ",
+            'ST ANN': " ",
+            'ST GEORGE': " ",
+            'ST JOHN': " ",
+            'ST LOUIS': " ",
+            'ST LOUIS CITY': "ST. LOUIS CITY",
+            'ST LOUIS COUNTY': " ",
         };
 
-        return `<a href="#details-${stop.attributes.stopID}"
+        if (muni[juris]) {
+            return muni[juris];
+        } else {
+            return muni;
+        }
+
+    }
+    console.log(stop)
+
+    return `
+        //start of the data mapping for assessment / install survey / survey button 
+        <a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
                     data-globalid = '${stop.attributes.globalid}'
                     data-stopid = '${stop.attributes.stopID}'
@@ -96,16 +122,29 @@ const setStatus = (stop) => {
                         </li>    
                     </ul>
                 </a>
+
+                // start of the MO1CALL data mapping / survey button
                 <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
                     <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}"
-                    data-objectid = '${stop.attributes.objectid}'
-                    data-globalid = '${stop.attributes.globalid}'
-                    data-stopid = '${stop.attributes.stopID}'
-                    data-assessStatus = '${stop.attributes.approved}'
-                    data-approvalComments = '${stop.attributes.approvalComments}'>
+                        data-objectid = '${stop.attributes.objectid}'
+                        data-globalid = '${stop.attributes.globalid}'
+                        data-stopid = '${stop.attributes.stopID}'
+                        data-assessStatus = '${stop.attributes.approved}'
+                        data-approvalComments = '${stop.attributes.approvalComments}'
+                    >
                         Assessment/Install
                     </a>
-                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange">
+                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange"
+                        data-stopid = '${stop.attributes.stopID}'
+                        data-stopname = '${stop.attributes.stopName}'
+                        data-stppos = '${stop.attributes.STP_P}'
+                        data-onst = '${stop.attributes.onSt}'}'
+                        data-atst = '${stop.attributes.atSt}'
+                        data-city = '${cityCorrection(stop.attributes.JURIS)}'
+                        data-county = '${stop.attributes.COUNTY}'
+                        data-state = '${stop.attributes.STATE}' 
+                        data-holes = '${stop.attributes.Tholes}'
+                    >
                         Dig Survey
                     </a>
                 </div>`;
@@ -147,7 +186,6 @@ const searching = (stop_search, version) => {
 const getAssessments = (url) => {
     get_survey_data(url)
         .then((data) => { 
-
             data.forEach(el => {
                 // install has not been filled out
                 if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
@@ -168,6 +206,17 @@ const getAssessments = (url) => {
             document.getElementById('mailbox-icon').src = 'assets/mailbox2.svg';}
     })
 };
+
+// start of function for getting dig requests submitted
+const getDigRequests = (url) => {
+    get_survey_data(url)
+        .then(data => {
+            console.log("dig: ", data)
+            data.forEach(el => {
+                if(el.attributes.stopID)
+            })
+    })
+}
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
 const getIssues = async (type) => {
@@ -277,10 +326,29 @@ const clickEvent = async (event) => {
         return;
 
     // CLICK LIST ELEMENT AND OPEN IFRAME!!!
+    // dataset: DOMStringMap(8)
+        // atst: "UNION BLVD"
+        // city: "ST LOUIS"
+        // county: "ST LOUIS CITY"
+        // holes: "0"
+        // onst: "WATERMAN BLVD"
+        // state: "MO"
+        // stopid: "15033"
+        // stppos: "NS"
+        
     } else if (event.target.closest(".openpop")) {
         let url = () => {
             if (event.target.closest('.dig')) {
-                return `https://survey123.arcgis.com/share/${surveyID().dig}`
+                return `https://survey123.arcgis.com/share/${surveyID().dig}
+                ?field:stop_id=${event.target.closest('.dig').dataset.stopid}
+                &field:stop_name=${event.target.closest('.dig').dataset.stopname}
+                &field:on_street=${event.target.closest('.dig').dataset.onst}
+                &field:at_street=${event.target.closest('.dig').dataset.atst}
+                &field:STP_P=${event.target.closest('.dig').dataset.stppos}
+                &field:city=${event.target.closest('.dig').dataset.city}
+                &field:county=${event.target.closest('.dig').dataset.county}
+                &field:_state=${event.target.closest('.dig').dataset.state}
+                &field:total_number_of_holes_at_stop=${event.target.closest('.dig').dataset.holes}`
             }
             else {
                 return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`;
@@ -289,6 +357,7 @@ const clickEvent = async (event) => {
         };
             
         let href = url();
+        console.log(href)
         if (href == "") {
             return;
         }
@@ -305,6 +374,7 @@ const clickEvent = async (event) => {
 };
 
 clear_data();
-getAssessments(surveyData());
+getAssessments(surveyData().assess);
+getDigRequests(surveyData().dig)
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
