@@ -105,8 +105,8 @@ const setStatus = (stop) => {
     }
     console.log(stop)
 
+    // start of the data mapping for assessment / install survey / survey button 
     return `
-        //start of the data mapping for assessment / install survey / survey button 
         <a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
                     data-globalid = '${stop.attributes.globalid}'
@@ -123,7 +123,6 @@ const setStatus = (stop) => {
                     </ul>
                 </a>
 
-                // start of the MO1CALL data mapping / survey button
                 <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
                     <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}"
                         data-objectid = '${stop.attributes.objectid}'
@@ -207,16 +206,6 @@ const getAssessments = (url) => {
     })
 };
 
-// start of function for getting dig requests submitted
-const getDigRequests = (url) => {
-    get_survey_data(url)
-        .then(data => {
-            console.log("dig: ", data)
-            data.forEach(el => {
-                if(el.attributes.stopID)
-            })
-    })
-}
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
 const getIssues = async (type) => {
@@ -375,6 +364,5 @@ const clickEvent = async (event) => {
 
 clear_data();
 getAssessments(surveyData().assess);
-getDigRequests(surveyData().dig)
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
