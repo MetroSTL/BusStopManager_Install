@@ -88,6 +88,7 @@ const setStatus = (stop) => {
             'BELLERIVE': " ",
             'CREVE COUER': 'CREVE COUER',
             'O FALLON': " ",
+
             'SAINT LOUIS COUNTY': "ST. LOUIS COUNTY",
             'ST ANN': " ",
             'ST GEORGE': " ",
@@ -376,6 +377,5 @@ const clickEvent = async (event) => {
 clear_data();
 getAssessments(surveyData().assess);
 getDigRequests(surveyData().dig);
-
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
