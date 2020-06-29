@@ -105,6 +105,17 @@ const setStatus = (stop) => {
         }
 
     }
+
+    const digComplete = id => {
+        console.log(assessments['dig'])
+        if (assessments['dig'].includes(parseInt(id))) {
+            return 'submitted strike'
+        }
+        else {
+            return;
+        }
+    }
+
     console.log(stop)
 
     // start of the data mapping for assessment / install survey / survey button 
@@ -135,7 +146,7 @@ const setStatus = (stop) => {
                     >
                         Assessment/Install
                     </a>
-                    <a class="dig button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange"
+                    <a class="dig ${digComplete(stop.attributes.stopID)} button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-orange"
                         data-stopid = '${stop.attributes.stopID}'
                         data-stopname = '${stop.attributes.stopName}'
                         data-stppos = '${stop.attributes.STP_P}'
@@ -215,7 +226,7 @@ const getDigRequests = async (url) => {
             assessments['dig'].push(parseInt(el.attributes.stop_id))
         })
         return assessments['dig'];
-    }).then(list=>console.log(list))
+    })
 }
 
 
@@ -305,7 +316,7 @@ const clickEvent = async (event) => {
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
     else if (!iframe && iframe_exists) {
         // CONFIRM AND CLOSE IFRAME
-        const iframeSource = document.getElementById("ifrm").src;
+        // const iframeSource = document.getElementById("ifrm").src;
         const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
         
         if (conf == true) {
@@ -339,6 +350,8 @@ const clickEvent = async (event) => {
         
     } else if (event.target.closest(".openpop")) {
         let url = () => {
+            
+
             if (event.target.closest('.dig')) {
                 return `https://survey123.arcgis.com/share/${surveyID().dig}
                 ?field:stop_id=${event.target.closest('.dig').dataset.stopid}
@@ -360,6 +373,10 @@ const clickEvent = async (event) => {
         let href = url();
         console.log(href)
         if (href == "") {
+            return;
+        }
+        if (event.target.closest('.submitted')) {
+            alert('A dig request has already been submitted for this stop.');
             return;
         }
         const ifrm = document.createElement("iframe");
