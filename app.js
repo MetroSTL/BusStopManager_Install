@@ -88,26 +88,27 @@ const setStatus = (stop) => {
             'BELLERIVE': " ",
             'CREVE COUER': 'CREVE COUER',
             'O FALLON': " ",
-            'SAINT LOUIS COUNTY': " ",
+
+            'SAINT LOUIS COUNTY': "ST. LOUIS COUNTY",
             'ST ANN': " ",
             'ST GEORGE': " ",
             'ST JOHN': " ",
             'ST LOUIS': " ",
             'ST LOUIS CITY': "ST. LOUIS CITY",
-            'ST LOUIS COUNTY': " ",
+            'ST LOUIS COUNTY': "ST. LOUIS COUNTY",
         };
 
         if (muni[juris]) {
             return muni[juris];
         } else {
-            return muni;
+            return juris;
         }
 
     }
     console.log(stop)
 
+    // start of the data mapping for assessment / install survey / survey button 
     return `
-        //start of the data mapping for assessment / install survey / survey button 
         <a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
                     data-globalid = '${stop.attributes.globalid}'
@@ -124,7 +125,6 @@ const setStatus = (stop) => {
                     </ul>
                 </a>
 
-                // start of the MO1CALL data mapping / survey button
                 <div class="pa2 ba br3 accordion-content w-100" id="details-${stop.attributes.stopID}">
                     <a class="assess button_popup openpop link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}"
                         data-objectid = '${stop.attributes.objectid}'
@@ -208,15 +208,16 @@ const getAssessments = (url) => {
     })
 };
 
-// start of function for getting dig requests submitted
 const getDigRequests = async (url) => {
-    let data = await get_survey_data(url);    
-    let dig_list = [];
-    let list = await data.forEach( async el => {        
-        console.log(el.attributes.stop_id);
-        assessments['dig'].push(parseInt(el.attributes.stop_id))
-    });
+    get_survey_data(url).then(data => {
+        data.forEach( async el => {        
+            console.log(el.attributes.stop_id);
+            assessments['dig'].push(parseInt(el.attributes.stop_id))
+        })
+        return assessments['dig'];
+    }).then(list=>console.log(list))
 }
+
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
 const getIssues = async (type) => {
@@ -375,6 +376,6 @@ const clickEvent = async (event) => {
 
 clear_data();
 getAssessments(surveyData().assess);
-getDigRequests(surveyData().dig)
+getDigRequests(surveyData().dig);
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
