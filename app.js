@@ -87,19 +87,19 @@ const setStatus = (stop) => {
             'BELLERIVE': " ",
             'CREVE COUER': 'CREVE COUER',
             'O FALLON': " ",
-            'SAINT LOUIS COUNTY': " ",
+            'SAINT LOUIS COUNTY': "ST. LOUIS COUNTY",
             'ST ANN': " ",
             'ST GEORGE': " ",
             'ST JOHN': " ",
             'ST LOUIS': " ",
             'ST LOUIS CITY': "ST. LOUIS CITY",
-            'ST LOUIS COUNTY': " ",
+            'ST LOUIS COUNTY': "ST. LOUIS COUNTY",
         };
 
         if (muni[juris]) {
             return muni[juris];
         } else {
-            return muni;
+            return juris;
         }
 
     }
