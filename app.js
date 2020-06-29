@@ -19,6 +19,7 @@ let assessments = {
     failed: [],
     approved: [],
     pending: [],
+    dig: [],
 };
 
 //POLYFILLS
@@ -205,6 +206,16 @@ const getAssessments = (url) => {
             document.getElementById('mailbox-icon').src = 'assets/mailbox2.svg';}
     })
 };
+
+const getDigRequests = async (url) => {
+    get_survey_data(url).then(data => {
+        data.forEach( async el => {        
+            console.log(el.attributes.stop_id);
+            assessments['dig'].push(parseInt(el.attributes.stop_id))
+        })
+        return assessments['dig'];
+    }).then(list=>console.log(list))
+}
 
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
