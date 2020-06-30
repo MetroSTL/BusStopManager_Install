@@ -166,6 +166,7 @@ const setStatus = (stop) => {
                         data-county = '${countyCorrection(stop.attributes.COUNTY)}'
                         data-state = '${stop.attributes.STATE}' 
                         data-holes = '${stop.attributes.Tholes}'
+                        data-location = '${stop.geometry.y}, ${stop.geometry.x}'
                     >
                         Dig Survey
                     </a>
@@ -360,19 +361,20 @@ const clickEvent = async (event) => {
         
     } else if (event.target.closest(".openpop")) {
         let url = () => {
-            
+            let dig = event.target.closest('.dig')
 
             if (event.target.closest('.dig')) {
                 return `https://survey123.arcgis.com/share/${surveyID().dig}
-                ?field:stop_id=${event.target.closest('.dig').dataset.stopid}
-                &field:stop_name=${event.target.closest('.dig').dataset.stopname}
-                &field:on_street=${event.target.closest('.dig').dataset.onst}
-                &field:at_street=${event.target.closest('.dig').dataset.atst}
-                &field:STP_P=${event.target.closest('.dig').dataset.stppos}
-                &field:city=${event.target.closest('.dig').dataset.city}
-                &field:county=${event.target.closest('.dig').dataset.county}
-                &field:_state=${event.target.closest('.dig').dataset.state}
-                &field:total_number_of_holes_at_stop=${event.target.closest('.dig').dataset.holes}`
+                ?center=${dig.dataset.location}
+                &field:stop_id=${dig.dataset.stopid}
+                &field:stop_name=${dig.dataset.stopname}
+                &field:on_street=${dig.dataset.onst}
+                &field:at_street=${dig.dataset.atst}
+                &field:STP_P=${dig.dataset.stppos}
+                &field:city=${dig.dataset.city}
+                &field:county=${dig.dataset.county}
+                &field:_state=${dig.dataset.state}
+                &field:total_number_of_holes_at_stop=${dig.dataset.holes}`
             }
             else {
                 return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`;
