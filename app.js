@@ -99,7 +99,7 @@ const setStatus = (stop) => {
                     return assessments['missing_place'][i].properties.new_juris;
                 }
             };
-            console.log('error missing data from nearest place')
+            console.error('error missing data from nearest place')
             return;
         }
 
@@ -117,7 +117,6 @@ const setStatus = (stop) => {
     }
 
     const digComplete = id => {
-        console.log(assessments['dig'])
         if (assessments['dig'].includes(parseInt(id))) {
             return 'submitted strike'
         }
@@ -125,8 +124,6 @@ const setStatus = (stop) => {
             return;
         }
     }
-
-    console.log(stop)
 
     // start of the data mapping for assessment / install survey / survey button 
     return `
@@ -233,7 +230,6 @@ const getAssessments = (url) => {
 const getDigRequests = async (url) => {
     get_survey_data(url).then(data => {
         data.forEach( async el => {        
-            console.log(el.attributes.stop_id);
             assessments['dig'].push(parseInt(el.attributes.stop_id))
         })
         return assessments['dig'];
@@ -321,6 +317,7 @@ const clickEvent = async (event) => {
         (event.type == 'click' && event.target.closest('#search')))
         && stop_search != ""
         && !iframe_exists) {
+            initData();
             searching(jsonURL(stop_search).assess);
             return;
     }
@@ -332,6 +329,7 @@ const clickEvent = async (event) => {
         
         if (conf == true) {
             iframe_exists.parentNode.removeChild(iframe_exists);
+            initData();
         } else {
             return;
         }
@@ -361,9 +359,9 @@ const clickEvent = async (event) => {
         
     } else if (event.target.closest(".openpop")) {
         let url = () => {
-            let dig = event.target.closest('.dig')
+            let dig = event.target.closest('.dig');
 
-            if (event.target.closest('.dig')) {
+            if (dig) {
                 return `https://survey123.arcgis.com/share/${surveyID().dig}
                 ?center=${dig.dataset.location}
                 &field:stop_id=${dig.dataset.stopid}
@@ -383,7 +381,6 @@ const clickEvent = async (event) => {
         };
             
         let href = url();
-        console.log(href)
         if (href == "") {
             return;
         }
@@ -403,8 +400,21 @@ const clickEvent = async (event) => {
   }
 };
 
-clear_data();
-getAssessments(surveyData().assess);
-getDigRequests(surveyData().dig);
+const initData = () => {
+    getAssessments(surveyData().assess);
+    getDigRequests(surveyData().dig);
+    console.log('new data!')
+};
+
+const startPage = () => {
+    clear_data();
+    initData();
+};
+
+startPage();
+
+// get new dig and assessment data ever 30 seconds
+setInterval(()=>initData(),10*1000)
+    
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
