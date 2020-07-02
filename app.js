@@ -141,9 +141,9 @@ const setStatus = (stop) => {
 
                     class='button_popup accordion-toggle center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
                     <ul>
-                        <li class='f3 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
+                        <li class='f5 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
                         </li>
-                        <li class='f3 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
+                        <li class='f5 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
                         </li>    
                     </ul>
                 </a>
@@ -283,7 +283,7 @@ const iframe_gen = (divid, url) => {
     var button = document.createElement('div');
     button.setAttribute('id', 'close'); // assign an id
     button.setAttribute('class', 'w-100 center');
-    button.innerHTML = "<a id='close-survey' class='center w-30 helvetica f3 link br2 pv3 dib white bg-dark-red'>Close</a>";
+    button.innerHTML = "<a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>";
 
 
     // to place before another page element
