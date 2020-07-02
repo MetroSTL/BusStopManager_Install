@@ -414,7 +414,7 @@ const startPage = () => {
 startPage();
 
 // get new dig and assessment data ever 30 seconds
-setInterval(()=>initData(),10*1000)
+setInterval(()=>initData(),30*1000)
     
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
