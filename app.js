@@ -80,13 +80,18 @@ const setStatus = (stop) => {
 
     const countyCorrection = (co) => {
         let county = {
-            'St. Louis city': 'ST. LOUIS CITY',
-            'St. Louis County': 'ST. LOUIS'
+            'ST. LOUIS CITY': 'ST. LOUIS CITY',
+            'ST LOUIS CITY': 'ST. LOUIS',
+            'SAINT LOUIS CITY': 'ST. LOUIS CITY',
+            'ST. LOUIS COUNTY': 'ST. LOUIS CITY',
+            'ST LOUIS COUNTY': 'ST. LOUIS',
+            'SAINT LOUIS COUNTY': 'ST. LOUIS CITY'
         }
-        if (county[co]) {
-            return county[co]
+        if (county[co.toUpperCase()]) {
+            return county[co.toUpperCase()]
         } else {
-            return co;
+            alert("THERE IS AN ISSUE WITH THE COUNTY!")
+            return `COUNTY ERRROR: ${co}`;
         }
     }
 

@@ -87,7 +87,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -175,7 +175,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -263,7 +263,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wellston city"
+        "new_juris" : "Wellston"
       }
     },
     {
@@ -439,7 +439,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Overland city"
+        "new_juris" : "Overland"
       }
     },
     {
@@ -527,7 +527,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Overland city"
+        "new_juris" : "Overland"
       }
     },
     {
@@ -615,7 +615,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -703,7 +703,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -791,7 +791,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -879,7 +879,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -967,7 +967,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Overland city"
+        "new_juris" : "Overland"
       }
     },
     {
@@ -1055,7 +1055,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1143,7 +1143,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1231,7 +1231,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1319,7 +1319,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1407,7 +1407,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1495,7 +1495,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1583,7 +1583,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1671,7 +1671,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1759,7 +1759,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1847,7 +1847,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -1935,7 +1935,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2023,7 +2023,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2111,7 +2111,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2199,7 +2199,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2287,7 +2287,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2375,7 +2375,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2463,7 +2463,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2551,7 +2551,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -2639,7 +2639,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -2727,7 +2727,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -2815,7 +2815,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -2903,7 +2903,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -2991,7 +2991,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3079,7 +3079,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3167,7 +3167,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3255,7 +3255,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3343,7 +3343,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3431,7 +3431,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -3519,7 +3519,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -3607,7 +3607,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -3695,7 +3695,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -3783,7 +3783,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -3871,7 +3871,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -3959,7 +3959,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4047,7 +4047,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4135,7 +4135,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4223,7 +4223,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4311,7 +4311,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4399,7 +4399,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4487,7 +4487,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4575,7 +4575,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4663,7 +4663,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4751,7 +4751,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4839,7 +4839,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -4927,7 +4927,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -5015,7 +5015,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -5103,7 +5103,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -5191,7 +5191,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -5279,7 +5279,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -5367,7 +5367,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5455,7 +5455,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5543,7 +5543,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5631,7 +5631,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5719,7 +5719,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5807,7 +5807,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5895,7 +5895,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -5983,7 +5983,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -6071,7 +6071,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -6159,7 +6159,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -6247,7 +6247,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Country Club Hills city"
+        "new_juris" : "Country Club Hills"
       }
     },
     {
@@ -6335,7 +6335,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Crestwood city"
+        "new_juris" : "Crestwood"
       }
     },
     {
@@ -6423,7 +6423,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -6599,7 +6599,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -6687,7 +6687,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -6775,7 +6775,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -6863,7 +6863,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -6951,7 +6951,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -7039,7 +7039,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -7127,7 +7127,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7215,7 +7215,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7303,7 +7303,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7391,7 +7391,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7479,7 +7479,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7567,7 +7567,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Hazelwood city"
+        "new_juris" : "Hazelwood"
       }
     },
     {
@@ -7655,7 +7655,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7743,7 +7743,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7831,7 +7831,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -7919,7 +7919,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -8007,7 +8007,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -8095,7 +8095,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -8183,7 +8183,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -8271,7 +8271,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -8623,7 +8623,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -8711,7 +8711,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -8799,7 +8799,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Overland city"
+        "new_juris" : "Overland"
       }
     },
     {
@@ -8887,7 +8887,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Des Peres city"
+        "new_juris" : "Des Peres"
       }
     },
     {
@@ -8975,7 +8975,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Town and Country city"
+        "new_juris" : "Town and Country"
       }
     },
     {
@@ -9063,7 +9063,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Town and Country city"
+        "new_juris" : "Town and Country"
       }
     },
     {
@@ -9151,7 +9151,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Des Peres city"
+        "new_juris" : "Des Peres"
       }
     },
     {
@@ -9239,7 +9239,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Town and Country city"
+        "new_juris" : "Town and Country"
       }
     },
     {
@@ -9327,7 +9327,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9415,7 +9415,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9503,7 +9503,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9591,7 +9591,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9679,7 +9679,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9767,7 +9767,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9855,7 +9855,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -9943,7 +9943,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -10031,7 +10031,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -10119,7 +10119,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -10207,7 +10207,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -10295,7 +10295,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -10383,7 +10383,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10471,7 +10471,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10559,7 +10559,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10647,7 +10647,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10735,7 +10735,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10823,7 +10823,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -10911,7 +10911,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -10999,7 +10999,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -11087,7 +11087,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -11175,7 +11175,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -11263,7 +11263,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -11351,7 +11351,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -11439,7 +11439,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11527,7 +11527,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11615,7 +11615,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11703,7 +11703,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11791,7 +11791,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11879,7 +11879,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -11967,7 +11967,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -12055,7 +12055,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -12143,7 +12143,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -12231,7 +12231,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12319,7 +12319,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12407,7 +12407,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12495,7 +12495,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12583,7 +12583,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12671,7 +12671,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12759,7 +12759,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -12847,7 +12847,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -12935,7 +12935,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -13023,7 +13023,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -13111,7 +13111,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -13199,7 +13199,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -13287,7 +13287,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -13375,7 +13375,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -13463,7 +13463,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -13551,7 +13551,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Hazelwood city"
+        "new_juris" : "Hazelwood"
       }
     },
     {
@@ -13639,7 +13639,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -13727,7 +13727,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -13815,7 +13815,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -13903,7 +13903,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -13991,7 +13991,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14079,7 +14079,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14167,7 +14167,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14255,7 +14255,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14343,7 +14343,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14431,7 +14431,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -14519,7 +14519,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -14607,7 +14607,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -14695,7 +14695,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -15047,7 +15047,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -15311,7 +15311,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -15487,7 +15487,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -15575,7 +15575,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -15663,7 +15663,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -15751,7 +15751,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -15839,7 +15839,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -15927,7 +15927,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -16015,7 +16015,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -16103,7 +16103,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -16191,7 +16191,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -16279,7 +16279,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -16367,7 +16367,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -16455,7 +16455,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -16543,7 +16543,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -16631,7 +16631,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -16719,7 +16719,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "West Alton city"
+        "new_juris" : "West Alton"
       }
     },
     {
@@ -16807,7 +16807,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -16895,7 +16895,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -16983,7 +16983,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -17071,7 +17071,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -17159,7 +17159,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -17247,7 +17247,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -17335,7 +17335,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -17423,7 +17423,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -17599,7 +17599,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -17687,7 +17687,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -17775,7 +17775,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -17863,7 +17863,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -17951,7 +17951,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -18039,7 +18039,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -18127,7 +18127,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -18215,7 +18215,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -18303,7 +18303,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -18391,7 +18391,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18479,7 +18479,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18567,7 +18567,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18655,7 +18655,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18743,7 +18743,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18831,7 +18831,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -18919,7 +18919,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19007,7 +19007,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19095,7 +19095,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19183,7 +19183,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19271,7 +19271,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19359,7 +19359,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -19447,7 +19447,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Breckenridge Hills city"
+        "new_juris" : "Breckenridge Hills"
       }
     },
     {
@@ -19535,7 +19535,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -19623,7 +19623,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -19711,7 +19711,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -19799,7 +19799,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -19887,7 +19887,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -19975,7 +19975,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -20063,7 +20063,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -20239,7 +20239,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Greendale city"
+        "new_juris" : "Greendale"
       }
     },
     {
@@ -20415,7 +20415,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -20503,7 +20503,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -20591,7 +20591,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -20679,7 +20679,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -20767,7 +20767,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -20855,7 +20855,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -20943,7 +20943,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -21031,7 +21031,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -21119,7 +21119,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21207,7 +21207,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21295,7 +21295,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21383,7 +21383,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -21471,7 +21471,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -21559,7 +21559,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -21647,7 +21647,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -21735,7 +21735,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21823,7 +21823,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21911,7 +21911,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -21999,7 +21999,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -22087,7 +22087,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -22175,7 +22175,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22263,7 +22263,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22351,7 +22351,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22439,7 +22439,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22527,7 +22527,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22615,7 +22615,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -22703,7 +22703,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -22791,7 +22791,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -22879,7 +22879,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -22967,7 +22967,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23055,7 +23055,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23143,7 +23143,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23231,7 +23231,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23319,7 +23319,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23407,7 +23407,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23495,7 +23495,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23583,7 +23583,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23671,7 +23671,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -23759,7 +23759,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -23847,7 +23847,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -23935,7 +23935,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -24023,7 +24023,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -24111,7 +24111,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -24199,7 +24199,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -24287,7 +24287,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -24375,7 +24375,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24463,7 +24463,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24551,7 +24551,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24639,7 +24639,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24727,7 +24727,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24815,7 +24815,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24903,7 +24903,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -24991,7 +24991,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -25079,7 +25079,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -25167,7 +25167,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -25255,7 +25255,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Flordell Hills city"
+        "new_juris" : "Flordell Hills"
       }
     },
     {
@@ -25343,7 +25343,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -25431,7 +25431,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -25519,7 +25519,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -25607,7 +25607,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Webster Groves city"
+        "new_juris" : "Webster Groves"
       }
     },
     {
@@ -25695,7 +25695,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Webster Groves city"
+        "new_juris" : "Webster Groves"
       }
     },
     {
@@ -25783,7 +25783,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -25871,7 +25871,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -25959,7 +25959,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -26047,7 +26047,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -26135,7 +26135,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -26223,7 +26223,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -26311,7 +26311,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Edmundson city"
+        "new_juris" : "Edmundson"
       }
     },
     {
@@ -26399,7 +26399,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -26487,7 +26487,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -26575,7 +26575,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -26663,7 +26663,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -26751,7 +26751,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -26839,7 +26839,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -26927,7 +26927,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -27015,7 +27015,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -27103,7 +27103,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -27191,7 +27191,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -27455,7 +27455,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Beverly Hills city"
+        "new_juris" : "Beverly Hills"
       }
     },
     {
@@ -27543,7 +27543,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -27631,7 +27631,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -27719,7 +27719,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -27807,7 +27807,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -27895,7 +27895,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -27983,7 +27983,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28071,7 +28071,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28159,7 +28159,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28247,7 +28247,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28335,7 +28335,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28423,7 +28423,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28511,7 +28511,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28599,7 +28599,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -28687,7 +28687,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -28775,7 +28775,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -28863,7 +28863,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Valley Park city"
+        "new_juris" : "Valley Park"
       }
     },
     {
@@ -28951,7 +28951,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Manchester city"
+        "new_juris" : "Manchester"
       }
     },
     {
@@ -29039,7 +29039,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Manchester city"
+        "new_juris" : "Manchester"
       }
     },
     {
@@ -29127,7 +29127,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Manchester city"
+        "new_juris" : "Manchester"
       }
     },
     {
@@ -29215,7 +29215,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -29303,7 +29303,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -29391,7 +29391,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -29479,7 +29479,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -29567,7 +29567,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -29655,7 +29655,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -29743,7 +29743,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -29831,7 +29831,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -29919,7 +29919,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -30007,7 +30007,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -30095,7 +30095,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30183,7 +30183,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30271,7 +30271,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30359,7 +30359,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30447,7 +30447,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30535,7 +30535,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -30623,7 +30623,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -30711,7 +30711,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -30799,7 +30799,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -30887,7 +30887,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -30975,7 +30975,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -31063,7 +31063,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -31151,7 +31151,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -31239,7 +31239,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Dellwood city"
+        "new_juris" : "Dellwood"
       }
     },
     {
@@ -31327,7 +31327,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -31415,7 +31415,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -31503,7 +31503,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -31591,7 +31591,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -31679,7 +31679,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Frontenac city"
+        "new_juris" : "Frontenac"
       }
     },
     {
@@ -31767,7 +31767,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -31855,7 +31855,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -31943,7 +31943,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -32031,7 +32031,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -32119,7 +32119,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -32207,7 +32207,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -32383,7 +32383,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -32735,7 +32735,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -32823,7 +32823,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -32911,7 +32911,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -32999,7 +32999,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33087,7 +33087,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33175,7 +33175,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33263,7 +33263,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33351,7 +33351,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33439,7 +33439,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -33527,7 +33527,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -33615,7 +33615,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -33703,7 +33703,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -33791,7 +33791,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -33879,7 +33879,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -33967,7 +33967,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -34055,7 +34055,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bella Villa city"
+        "new_juris" : "Bella Villa"
       }
     },
     {
@@ -34143,7 +34143,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34231,7 +34231,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34319,7 +34319,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34407,7 +34407,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34495,7 +34495,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34583,7 +34583,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34671,7 +34671,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -34759,7 +34759,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Louis city"
+        "new_juris" : "St. Louis"
       }
     },
     {
@@ -35287,7 +35287,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -35375,7 +35375,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Woodson Terrace city"
+        "new_juris" : "Woodson Terrace"
       }
     },
     {
@@ -35463,7 +35463,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Edmundson city"
+        "new_juris" : "Edmundson"
       }
     },
     {
@@ -35551,7 +35551,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -35639,7 +35639,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -35727,7 +35727,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -35815,7 +35815,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -35903,7 +35903,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -35991,7 +35991,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -36079,7 +36079,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -36167,7 +36167,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -36255,7 +36255,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -36343,7 +36343,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -36431,7 +36431,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -36519,7 +36519,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Overland city"
+        "new_juris" : "Overland"
       }
     },
     {
@@ -36607,7 +36607,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -36695,7 +36695,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Country Club Hills city"
+        "new_juris" : "Country Club Hills"
       }
     },
     {
@@ -36783,7 +36783,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -36871,7 +36871,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Des Peres city"
+        "new_juris" : "Des Peres"
       }
     },
     {
@@ -36959,7 +36959,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -37047,7 +37047,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Lakeshire city"
+        "new_juris" : "Lakeshire"
       }
     },
     {
@@ -37135,7 +37135,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -37223,7 +37223,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -37311,7 +37311,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -37399,7 +37399,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -37487,7 +37487,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -37575,7 +37575,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -37663,7 +37663,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -37751,7 +37751,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -37839,7 +37839,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -37927,7 +37927,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -38015,7 +38015,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -38103,7 +38103,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -38191,7 +38191,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -38279,7 +38279,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -38367,7 +38367,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -38455,7 +38455,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -38543,7 +38543,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -38631,7 +38631,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -38719,7 +38719,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -38807,7 +38807,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -38895,7 +38895,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -38983,7 +38983,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -39071,7 +39071,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -39159,7 +39159,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -39423,7 +39423,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -39863,7 +39863,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -40039,7 +40039,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -40479,7 +40479,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -40567,7 +40567,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Green Park city"
+        "new_juris" : "Green Park"
       }
     },
     {
@@ -40655,7 +40655,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -40743,7 +40743,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Moline Acres city"
+        "new_juris" : "Moline Acres"
       }
     },
     {
@@ -40831,7 +40831,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -41007,7 +41007,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -41095,7 +41095,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -41183,7 +41183,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -41271,7 +41271,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Arnold city"
+        "new_juris" : "Arnold"
       }
     },
     {
@@ -41359,7 +41359,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Jennings city"
+        "new_juris" : "Jennings"
       }
     },
     {
@@ -41447,7 +41447,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -41535,7 +41535,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. John city"
+        "new_juris" : "St. John"
       }
     },
     {
@@ -41623,7 +41623,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -41711,7 +41711,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -41799,7 +41799,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -41887,7 +41887,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -41975,7 +41975,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -42063,7 +42063,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -42151,7 +42151,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -42239,7 +42239,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -42327,7 +42327,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -42415,7 +42415,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -42503,7 +42503,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -42591,7 +42591,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellerive Acres city"
+        "new_juris" : "Bellerive Acres"
       }
     },
     {
@@ -42679,7 +42679,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -42767,7 +42767,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Fenton city"
+        "new_juris" : "Fenton"
       }
     },
     {
@@ -42855,7 +42855,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Sunset Hills city"
+        "new_juris" : "Sunset Hills"
       }
     },
     {
@@ -42943,7 +42943,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -43031,7 +43031,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -43119,7 +43119,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -43207,7 +43207,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Valley Park city"
+        "new_juris" : "Valley Park"
       }
     },
     {
@@ -43295,7 +43295,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Valley Park city"
+        "new_juris" : "Valley Park"
       }
     },
     {
@@ -43383,7 +43383,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Ferguson city"
+        "new_juris" : "Ferguson"
       }
     },
     {
@@ -43471,7 +43471,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Shrewsbury city"
+        "new_juris" : "Shrewsbury"
       }
     },
     {
@@ -43559,7 +43559,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Valley Park city"
+        "new_juris" : "Valley Park"
       }
     },
     {
@@ -43647,7 +43647,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Berkeley city"
+        "new_juris" : "Berkeley"
       }
     },
     {
@@ -43735,7 +43735,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -43823,7 +43823,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -43911,7 +43911,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -43999,7 +43999,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -44087,7 +44087,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Fenton city"
+        "new_juris" : "Fenton"
       }
     },
     {
@@ -44175,7 +44175,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Chesterfield city"
+        "new_juris" : "Chesterfield"
       }
     },
     {
@@ -44263,7 +44263,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -44351,7 +44351,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -44439,7 +44439,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Florissant city"
+        "new_juris" : "Florissant"
       }
     },
     {
@@ -44527,7 +44527,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -44615,7 +44615,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -44703,7 +44703,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -44791,7 +44791,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -44879,7 +44879,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -44967,7 +44967,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -45055,7 +45055,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -45143,7 +45143,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -45231,7 +45231,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -45319,7 +45319,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Creve Coeur city"
+        "new_juris" : "Creve Coeur"
       }
     },
     {
@@ -45407,7 +45407,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Hazelwood city"
+        "new_juris" : "Hazelwood"
       }
     },
     {
@@ -45495,7 +45495,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -45583,7 +45583,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -45671,7 +45671,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -45759,7 +45759,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -45847,7 +45847,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -45935,7 +45935,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Fenton city"
+        "new_juris" : "Fenton"
       }
     },
     {
@@ -46023,7 +46023,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Fenton city"
+        "new_juris" : "Fenton"
       }
     },
     {
@@ -46111,7 +46111,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Maryland Heights city"
+        "new_juris" : "Maryland Heights"
       }
     },
     {
@@ -46199,7 +46199,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     },
     {
@@ -46287,7 +46287,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46375,7 +46375,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46463,7 +46463,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46551,7 +46551,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46639,7 +46639,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46727,7 +46727,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bellefontaine Neighbors city"
+        "new_juris" : "Bellefontaine Neighbors"
       }
     },
     {
@@ -46815,7 +46815,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -46903,7 +46903,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "St. Ann city"
+        "new_juris" : "St. Ann"
       }
     },
     {
@@ -46991,7 +46991,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -47079,7 +47079,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Black Jack city"
+        "new_juris" : "Black Jack"
       }
     },
     {
@@ -47167,7 +47167,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bridgeton city"
+        "new_juris" : "Bridgeton"
       }
     }
   ]
