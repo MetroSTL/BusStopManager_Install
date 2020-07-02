@@ -351,7 +351,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Hanley Hills village"
+        "new_juris" : "Hanley Hills"
       }
     },
     {
@@ -6511,7 +6511,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -8359,7 +8359,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -8447,7 +8447,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -8535,7 +8535,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -14783,7 +14783,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Ridge village"
+        "new_juris" : "Bel-Ridge"
       }
     },
     {
@@ -14871,7 +14871,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -14959,7 +14959,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -15135,7 +15135,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -15223,7 +15223,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Ridge village"
+        "new_juris" : "Bel-Ridge"
       }
     },
     {
@@ -15399,7 +15399,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -17511,7 +17511,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -20151,7 +20151,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -20327,7 +20327,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
@@ -27279,7 +27279,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -27367,7 +27367,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Bel-Nor village"
+        "new_juris" : "Bel-Nor"
       }
     },
     {
@@ -32295,7 +32295,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -32471,7 +32471,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -32559,7 +32559,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -32647,7 +32647,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Riverview village"
+        "new_juris" : "Riverview"
       }
     },
     {
@@ -34847,7 +34847,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Marlborough village"
+        "new_juris" : "Marlborough"
       }
     },
     {
@@ -34935,7 +34935,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Grantwood Village town"
+        "new_juris" : "Grantwood Village"
       }
     },
     {
@@ -35023,7 +35023,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Grantwood Village town"
+        "new_juris" : "Grantwood Village"
       }
     },
     {
@@ -35111,7 +35111,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Marlborough village"
+        "new_juris" : "Marlborough"
       }
     },
     {
@@ -35199,7 +35199,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Marlborough village"
+        "new_juris" : "Marlborough"
       }
     },
     {
@@ -39247,7 +39247,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
@@ -39335,7 +39335,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
@@ -39511,7 +39511,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Mackenzie village"
+        "new_juris" : "Mackenzie"
       }
     },
     {
@@ -39599,7 +39599,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Mackenzie village"
+        "new_juris" : "Mackenzie"
       }
     },
     {
@@ -39687,7 +39687,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Mackenzie village"
+        "new_juris" : "Mackenzie"
       }
     },
     {
@@ -39775,7 +39775,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Mackenzie village"
+        "new_juris" : "Mackenzie"
       }
     },
     {
@@ -39951,7 +39951,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Marlborough village"
+        "new_juris" : "Marlborough"
       }
     },
     {
@@ -40127,7 +40127,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
@@ -40215,7 +40215,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
@@ -40303,7 +40303,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Grantwood Village town"
+        "new_juris" : "Grantwood Village"
       }
     },
     {
@@ -40391,7 +40391,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Grantwood Village town"
+        "new_juris" : "Grantwood Village"
       }
     },
     {
@@ -40919,7 +40919,7 @@ export default function nearest_place() {
         "POINT_X" : 0,
         "POINT_Y" : 0,
         "new_county" : "ST. LOUIS COUNTY",
-        "new_juris" : "Wilbur Park village"
+        "new_juris" : "Wilbur Park"
       }
     },
     {
