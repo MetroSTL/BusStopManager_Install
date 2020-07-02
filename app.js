@@ -274,9 +274,29 @@ const getIssues = async (type) => {
     })
 };
 
+const iframe_gen = (divid, url) => {
+    const div = document.getElementById(divid);
+    var ifrm = document.createElement('iframe');
+    ifrm.setAttribute('id', 'ifrm'); // assign an id
+    ifrm.setAttribute(`src`, url);
+
+    var button = document.createElement('div');
+    button.setAttribute('id', 'close'); // assign an id
+    button.setAttribute('class', 'w-100 center');
+    button.innerHTML = "<a id='close-survey' class='center w-30 helvetica f3 link br2 pv3 dib white bg-dark-red'>Close</a>";
+
+
+    // to place before another page element
+    var el = document.getElementById('marker');
+    div.parentNode.insertBefore(ifrm, el);
+    div.parentNode.insertBefore(button, el)
+
+};
+
 const clickEvent = async (event) => {
     event.preventDefault();
     const iframe_exists = document.getElementById("ifrm");
+    const close_button = document.getElementById("close-survey");
     stop_search = document.getElementById("search").value;
     const iframe = event.target.closest("#iframe");
     // const search = event.target.closest("#search");
@@ -284,6 +304,7 @@ const clickEvent = async (event) => {
     const mailbox = event.target.closest('#mailbox-icon');
     const completed = event.target.closest('#completed-icon');
     var signInButton = event.target.closest('#sign-in-icon');
+    const close_survey = event.target.closest('#close-survey');
 
     let item = event.target.closest(".openpop");
     if (signInButton) {
@@ -327,13 +348,14 @@ const clickEvent = async (event) => {
             return;
     }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
-    else if (!iframe && iframe_exists) {
+    else if (close_survey) {
         // CONFIRM AND CLOSE IFRAME
         // const iframeSource = document.getElementById("ifrm").src;
         const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
         
         if (conf == true) {
             iframe_exists.parentNode.removeChild(iframe_exists);
+            close_button.parentNode.removeChild(close_button);
             initData();
         } else {
             return;
@@ -393,14 +415,7 @@ const clickEvent = async (event) => {
             alert('A dig request has already been submitted for this stop.');
             return;
         }
-        const ifrm = document.createElement("iframe");
-        const el = document.getElementById("marker");
-        const main = document.querySelector("#main");
-
-        ifrm.setAttribute("id", "ifrm"); // assign an id
-        ifrm.setAttribute(`src`, href);
-
-        main.parentNode.insertBefore(ifrm, el);
+        iframe_gen('app', href);
         return;
   }
 };
