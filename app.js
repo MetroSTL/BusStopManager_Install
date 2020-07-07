@@ -5,7 +5,7 @@ import nearest_place from './nearest_place.js';
 //STATIC URLS
 //HTML SECTION SELECTORS
 const list_div = document.getElementById("list");
-let stop_search = document.getElementById("search").value;
+// let stop_search = document.getElementById("search").value;
 let signin = false
 
 // generic lists for putting list of stopID's
@@ -90,7 +90,7 @@ const setStatus = (stop) => {
         if (county[co.toUpperCase()]) {
             return county[co.toUpperCase()]
         } else {
-            alert("THERE IS AN ISSUE WITH THE COUNTY!")
+            alert("THERE IS AN ISSUE WITH THE COUNTY!");
             return `COUNTY ERRROR: ${co}`;
         }
     }
@@ -269,46 +269,57 @@ const getIssues = async (type) => {
                 list_div.innerHTML += setStatus(element);
                 return await div;
             })
-            
         }, 3000);
     })
 };
 
+// function for generating iframe for surveys
+// divid == the div that the iframe will be inserted into (needs to be in the center of the page)
+// url == the url that the iframe is directed to
 const iframe_gen = (divid, url) => {
     const div = document.getElementById(divid);
+
+    // setup iframe for rendering
     var ifrm = document.createElement('iframe');
     ifrm.setAttribute('id', 'ifrm'); // assign an id
     ifrm.setAttribute(`src`, url);
 
+    // create close button
     var button = document.createElement('div');
     button.setAttribute('id', 'close'); // assign an id
     button.setAttribute('class', 'w-100 center');
     button.innerHTML = "<a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>";
 
-
-    // to place before another page element
+    // to place before another page element (render divs)
     var el = document.getElementById('marker');
     div.parentNode.insertBefore(ifrm, el);
     div.parentNode.insertBefore(button, el)
 
 };
 
+// logic for clicks and submits
 const clickEvent = async (event) => {
+    // prevents default refresh and whatnot
     event.preventDefault();
+
+    // list of elements
     const iframe_exists = document.getElementById("ifrm");
     const close_button = document.getElementById("close-survey");
-    stop_search = document.getElementById("search").value;
-    const iframe = event.target.closest("#iframe");
-    // const search = event.target.closest("#search");
+    const stop_search = document.getElementById("search").value;
+
+    // list of event targets
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
     const completed = event.target.closest('#completed-icon');
-    var signInButton = event.target.closest('#sign-in-icon');
+    const signInButton = event.target.closest('#sign-in-icon');
     const close_survey = event.target.closest('#close-survey');
+    const item = event.target.closest(".openpop");
 
-    let item = event.target.closest(".openpop");
-    if (signInButton) {
+    // signin (OAuth) for ArcGIS Online
+    // configurations are setup on AGOL developers portal. vars are set in private.js
+    
     // if (signInButton || signin == false) {
+    if (signInButton) {
         window.open('https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
         signin = true;
         return;
