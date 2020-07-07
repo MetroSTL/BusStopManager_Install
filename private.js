@@ -30,7 +30,7 @@ const surveyID = () => {
 
 
 var clientId = 'hhibAhdSLrpXfARP';
-var redirectUri = 'https://metrostl.maps.arcgis.com/home/index.html';
+var redirectUri = 'https://aviddabbler.github.io/BusStopAssessmentApp/';
 
 // do this on a button click to avoid popup blockers
 
