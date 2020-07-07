@@ -29,7 +29,7 @@ const surveyID = () => {
 }
 
 
-var clientId = '4378a340816945708d9b0d51a1261cdd';
+var clientId = 'hhibAhdSLrpXfARP';
 var redirectUri = 'https://aviddabbler.github.io/BusStopAssessmentApp/';
 
 // do this on a button click to avoid popup blockers
