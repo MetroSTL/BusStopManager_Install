@@ -318,9 +318,9 @@ const clickEvent = async (event) => {
     // signin (OAuth) for ArcGIS Online
     // configurations are setup on AGOL developers portal. vars are set in private.js
     
-    if (signInButton || signin == false) {
-    // if (signInButton) {
-        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&expiration=20160&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
+    // if (signInButton || signin == false) {
+    if (signInButton) {
+        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
 
         signin = true;
         return;
