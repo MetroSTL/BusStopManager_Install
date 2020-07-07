@@ -1,6 +1,10 @@
 import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 import nearest_place from './nearest_place.js';
 
+const urlParams = new URLSearchParams(window.location.search);
+const token = urlParams.get('code');
+
+console.log(token)
 
 //STATIC URLS
 //HTML SECTION SELECTORS
@@ -209,6 +213,7 @@ const searching = (stop_search, version) => {
 
 // adds stop id's to pending, approved, or failed lists
 const getAssessments = (url) => {
+    console.log(url)
     get_survey_data(url)
         .then((data) => { 
             data.forEach(el => {
@@ -248,7 +253,7 @@ const getIssues = async (type) => {
     const crossRef = async () => {
         let list = [];
         assessments[type].forEach(async item => {
-            await get_survey_data(await jsonURL(item).assess)
+            await get_survey_data(await jsonURL(item, token).assess)
                 .then(data => {
                     list.push(data[0]);
                 })
@@ -320,7 +325,7 @@ const clickEvent = async (event) => {
     
     // if (signInButton || signin == false) {
     if (signInButton) {
-        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
+        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=code&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
 
         signin = true;
         return;
@@ -356,7 +361,7 @@ const clickEvent = async (event) => {
         && stop_search != ""
         && !iframe_exists) {
             initData();
-            searching(jsonURL(stop_search).assess);
+            searching(jsonURL(stop_search, token).assess);
             return;
     }
   // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
@@ -433,8 +438,8 @@ const clickEvent = async (event) => {
 };
 
 const initData = () => {
-    getAssessments(surveyData().assess);
-    getDigRequests(surveyData().dig);
+    getAssessments(surveyData(token).assess);
+    getDigRequests(surveyData(token).dig);
     console.log('new data!')
 };
 
@@ -450,3 +455,8 @@ setInterval(()=>initData(),30*1000)
     
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
+
+let arc_token = () => {
+    console.log(window.url)
+}
+arc_token()
