@@ -203,7 +203,8 @@ const render = async function (d) {
 };
 
 // html filler for showing data is loading
-const dataLoading =  '<h2 class="i">Data is loading...</h2>';
+const dataLoading = fullHash ? '<h2 class="i">Data is loading...</h2>' : '<h2 class="i">Please login</h2>'
+
 
 // search and render stops (generic function)
 const searching = (stop_search, version) => {
