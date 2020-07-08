@@ -1,9 +1,12 @@
 import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 import nearest_place from './nearest_place.js';
-
+let token;
 const fullHash = document.location.hash.split('#')[1];
-const params = JSON.parse('{"' + decodeURI(fullHash).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-const token = params.access_token;
+if (fullHash) {
+    const params = JSON.parse('{"' + decodeURI(fullHash).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+    token = params.access_token;
+    
+}
 
 //STATIC URLS
 //HTML SECTION SELECTORS
@@ -447,10 +450,12 @@ const startPage = () => {
     initData();
 };
 
-startPage();
+if (fullHash) {
+    startPage();
 
-// get new dig and assessment data ever 30 seconds
-setInterval(()=>initData(),30*1000)
+    // get new dig and assessment data ever 30 seconds
+    setInterval(()=>initData(),30*1000)
+}
     
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
