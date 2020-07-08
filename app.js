@@ -1,10 +1,9 @@
 import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 import nearest_place from './nearest_place.js';
 
-const urlParams = new URLSearchParams(window.location.search);
-const token = urlParams.get('code');
-
-console.log(token)
+const fullHash = document.location.hash.split('#')[1];
+const params = JSON.parse('{"' + decodeURI(fullHash).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+const token = params.access_token;
 
 //STATIC URLS
 //HTML SECTION SELECTORS
@@ -325,7 +324,7 @@ const clickEvent = async (event) => {
     
     // if (signInButton || signin == false) {
     if (signInButton) {
-        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=code&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
+        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
 
         signin = true;
         return;
