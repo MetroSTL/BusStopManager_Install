@@ -33,7 +33,6 @@ const surveyID = () => {
 
 
 var clientId = 'hhibAhdSLrpXfARP';
-// var redirectUri = 'https://aviddabbler.github.io/BusStopAssessmentApp/';
 var redirectUri = 'http://127.0.0.1:8080/';
 
 // do this on a button click to avoid popup blockers
