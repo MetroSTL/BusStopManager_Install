@@ -33,8 +33,8 @@ const surveyID = () => {
 
 
 var clientId = 'hhibAhdSLrpXfARP';
-var redirectUri = 'http://127.0.0.1:8080/';
-// var redirectUri = 'https://testexternalapps.metrostlouis.org/busstopassessment/';
+// var redirectUri = 'http://192.168.1.66:8080/';
+var redirectUri = 'https://testexternalapps.metrostlouis.org/busstopassessment/';
 
 // do this on a button click to avoid popup blockers
 
