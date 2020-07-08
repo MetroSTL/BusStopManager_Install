@@ -419,10 +419,11 @@ const clickEvent = async (event) => {
                 &field:city=${dig.dataset.city}
                 &field:county=${dig.dataset.county}
                 &field:_state=${dig.dataset.state}
-                &field:total_number_of_holes_at_stop=${dig.dataset.holes}`
+                &field:total_number_of_holes_at_stop=${dig.dataset.holes}
+                &token=${token}`
             }
             else {
-                return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}`;
+                return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}&token=${token}`;
             }
 
         };
