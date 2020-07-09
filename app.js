@@ -49,7 +49,7 @@ const get_survey_data = async (url) => {
 };
 
 // clears out list of stops and searchbar
-const clear_data = async () => {
+const clear_data = () => {
     document.getElementById("search").value = "";
     document.getElementById('list').innerHTML = "";
     return;
@@ -287,7 +287,7 @@ const iframe_gen = (divid, url) => {
     const div = document.getElementById(divid);
 
     div.innerHTML =
-        `<div id='container' class='w-100'>
+        `<div id='container' class='center w-100'>
             <iframe id='ifrm' src='${url}'></iframe>
             <div id='close' class='w-100 center'>
                 <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
@@ -353,7 +353,6 @@ const open_survey = () => {
 
 const sign_in = () => {
     window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
-
     signin = true;
 };
 
@@ -452,11 +451,7 @@ const startPage = () => {
     }
 };
 
+startPage()
     
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
-
-// let arc_token = () => {
-//     console.log(window.url)
-// }
-// arc_token()
