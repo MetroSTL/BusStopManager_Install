@@ -50,9 +50,9 @@ const get_survey_data = async (url) => {
 
 // clears out list of stops and searchbar
 const clear_data = async () => {
-  list_div.innerHTML = "";
-  document.getElementById("search").value = "";
-  return;
+    document.getElementById("search").value = "";
+    document.getElementById('list').innerHTML = "";
+    return;
 };
 
 // uses assessment status and returns color for css
@@ -216,7 +216,6 @@ const searching = (stop_search, version) => {
 
 // adds stop id's to pending, approved, or failed lists
 const getAssessments = (url) => {
-    console.log(url)
     get_survey_data(url)
         .then((data) => { 
             data.forEach(el => {
@@ -287,32 +286,115 @@ const getIssues = async (type) => {
 const iframe_gen = (divid, url) => {
     const div = document.getElementById(divid);
 
-    // setup iframe for rendering
-    var ifrm = document.createElement('iframe');
-    ifrm.setAttribute('id', 'ifrm'); // assign an id
-    ifrm.setAttribute(`src`, url);
+    div.innerHTML =
+        `<div id='container' class='w-100'>
+            <iframe id='ifrm' src='${url}'></iframe>
+            <div id='close' class='w-100 center'>
+                <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
+            </div>
+        </div>`;
+};
 
-    // create close button
-    var button = document.createElement('div');
-    button.setAttribute('id', 'close'); // assign an id
-    button.setAttribute('class', 'w-100 center');
-    button.innerHTML = "<a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>";
+const close_survey = () => {
+    const close_survey = event.target.closest('#close-survey');
+    const close_button = document.getElementById("container");
 
-    // to place before another page element (render divs)
-    var el = document.getElementById('marker');
-    div.parentNode.insertBefore(ifrm, el);
-    div.parentNode.insertBefore(button, el)
+    if (close_survey) {
+        // CONFIRM AND CLOSE IFRAME
+        const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
+        
+        if (conf == true) {
+            close_button.parentNode.removeChild(close_button);
+            initData();
+        } else {
+            return;
+        }
+        document.getElementById('app').style.display = 'block';
+        return;
+    }
+};
 
+const open_survey = () => {
+    let url = () => {
+        let dig = event.target.closest('.dig');
+
+        if (dig) {
+            return `https://survey123.arcgis.com/share/${surveyID().dig}
+            ?center=${dig.dataset.location}
+            &field:stop_id=${dig.dataset.stopid}
+            &field:stop_name=${dig.dataset.stopname}
+            &field:on_street=${dig.dataset.onst}
+            &field:at_street=${dig.dataset.atst}
+            &field:STP_P=${dig.dataset.stppos}
+            &field:city=${dig.dataset.city}
+            &field:county=${dig.dataset.county}
+            &field:_state=${dig.dataset.state}
+            &field:total_number_of_holes_at_stop=${dig.dataset.holes}
+            &token=${token}`
+        }
+        else {
+            return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}&token=${token}`;
+        }
+
+    };
+        
+    let href = url();
+    if (href == "") {
+        return;
+    }
+    if (event.target.closest('.submitted')) {
+        alert('A dig request has already been submitted for this stop.');
+        return;
+    }
+    iframe_gen('icontainer', href);
+    document.getElementById('app').style.display = 'none';
+    return;
+};
+
+const sign_in = () => {
+    window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
+
+    signin = true;
+};
+
+const reveal_surveys = () => {
+    // Get the target content
+    var content = document.querySelector(event.target.closest('.accordion-toggle').hash);
+    if (!content) {
+        // kill it
+        return;
+    }
+     
+    // If the content is already expanded, collapse it and quit
+    if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        return;
+    }
+     
+    // Get all open accordion content, loop through it, and close it
+    var accordions = document.querySelectorAll('.accordion-content.active');
+    for (var i = 0; i < accordions.length; i++) {
+
+        accordions[i].classList.remove('active');
+    }
+     
+    // Toggle our content
+    content.classList.toggle('active');
 };
 
 // logic for clicks and submits
 const clickEvent = async (event) => {
     // prevents default refresh and whatnot
     event.preventDefault();
+    const container = document.getElementById('container');
+
+    if (container) {
+        close_survey();
+    
+    }
 
     // list of elements
     const iframe_exists = document.getElementById("ifrm");
-    const close_button = document.getElementById("close-survey");
     const stop_search = document.getElementById("search").value;
 
     // list of event targets
@@ -320,43 +402,17 @@ const clickEvent = async (event) => {
     const mailbox = event.target.closest('#mailbox-icon');
     const completed = event.target.closest('#completed-icon');
     const signInButton = event.target.closest('#sign-in-icon');
-    const close_survey = event.target.closest('#close-survey');
     const item = event.target.closest(".openpop");
 
     // signin (OAuth) for ArcGIS Online
     // configurations are setup on AGOL developers portal. vars are set in private.js
-    
-    // if (signInButton || signin == false) {
     if (signInButton) {
-        window.location.href = 'https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
-
-        signin = true;
+        sign_in();
         return;
     }
     // expand buttons
     else if (event.target.closest('.accordion-toggle')) {
-        // Get the target content
-        var content = document.querySelector(event.target.closest('.accordion-toggle').hash);
-        if (!content) {
-            // kill it
-            return;
-        }
-        
-        // If the content is already expanded, collapse it and quit
-        if (content.classList.contains('active')) {
-            content.classList.remove('active');
-            return;
-        }
-        
-        // Get all open accordion content, loop through it, and close it
-        var accordions = document.querySelectorAll('.accordion-content.active');
-        for (var i = 0; i < accordions.length; i++) {
-
-            accordions[i].classList.remove('active');
-        }
-        
-        // Toggle our content
-        content.classList.toggle('active');
+        reveal_surveys();
     }
     else if (((event.type == "submit" && event.target.closest('#form-search'))
         ||
@@ -367,23 +423,8 @@ const clickEvent = async (event) => {
             searching(jsonURL(stop_search, token).assess);
             return;
     }
-  // CLOSE IFRAME / CLICK OFF IFRAME WHEN ITS OPEN
-    else if (close_survey) {
-        // CONFIRM AND CLOSE IFRAME
-        // const iframeSource = document.getElementById("ifrm").src;
-        const conf = confirm("Do you want to close this survey? If you haven't submitted your data will be lost!")
-        
-        if (conf == true) {
-            iframe_exists.parentNode.removeChild(iframe_exists);
-            close_button.parentNode.removeChild(close_button);
-            initData();
-        } else {
-            return;
-        }
-        return;
-
     // render filtered completed surveys (failed, pending, approved)
-    } else if (notification) {
+    else if (notification) {
         getIssues('failed');
         return;
     } else if (mailbox) {
@@ -393,76 +434,29 @@ const clickEvent = async (event) => {
         getIssues('approved');
         return;
 
-    // CLICK LIST ELEMENT AND OPEN IFRAME!!!
-    // dataset: DOMStringMap(8)
-        // atst: "UNION BLVD"
-        // city: "ST LOUIS"
-        // county: "ST LOUIS CITY"
-        // holes: "0"
-        // onst: "WATERMAN BLVD"
-        // state: "MO"
-        // stopid: "15033"
-        // stppos: "NS"
-        
     } else if (event.target.closest(".openpop")) {
-        let url = () => {
-            let dig = event.target.closest('.dig');
-
-            if (dig) {
-                return `https://survey123.arcgis.com/share/${surveyID().dig}
-                ?center=${dig.dataset.location}
-                &field:stop_id=${dig.dataset.stopid}
-                &field:stop_name=${dig.dataset.stopname}
-                &field:on_street=${dig.dataset.onst}
-                &field:at_street=${dig.dataset.atst}
-                &field:STP_P=${dig.dataset.stppos}
-                &field:city=${dig.dataset.city}
-                &field:county=${dig.dataset.county}
-                &field:_state=${dig.dataset.state}
-                &field:total_number_of_holes_at_stop=${dig.dataset.holes}
-                &token=${token}`
-            }
-            else {
-                return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}&token=${token}`;
-            }
-
-        };
-            
-        let href = url();
-        if (href == "") {
-            return;
-        }
-        if (event.target.closest('.submitted')) {
-            alert('A dig request has already been submitted for this stop.');
-            return;
-        }
-        iframe_gen('app', href);
-        return;
+        open_survey();
   }
 };
 
 const initData = () => {
     getAssessments(surveyData(token).assess);
     getDigRequests(surveyData(token).dig);
-    console.log('new data!')
 };
 
 const startPage = () => {
-    clear_data();
-    initData();
+    if (fullHash) {
+        clear_data();
+        initData();
+        setInterval(()=>initData(),30*1000)
+    }
 };
 
-if (fullHash) {
-    startPage();
-
-    // get new dig and assessment data ever 30 seconds
-    setInterval(()=>initData(),30*1000)
-}
     
 window.addEventListener("click", clickEvent, false);
 window.addEventListener("submit", clickEvent, false);
 
-let arc_token = () => {
-    console.log(window.url)
-}
-arc_token()
+// let arc_token = () => {
+//     console.log(window.url)
+// }
+// arc_token()
