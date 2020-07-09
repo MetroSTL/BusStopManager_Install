@@ -314,7 +314,7 @@ const close_survey = () => {
     }
 };
 
-const open_survey = () => {
+const open_survey = (item) => {
     let url = () => {
         let dig = event.target.closest('.dig');
 
@@ -434,7 +434,7 @@ const clickEvent = async (event) => {
         return;
 
     } else if (event.target.closest(".openpop")) {
-        open_survey();
+        open_survey(item);
   }
 };
 

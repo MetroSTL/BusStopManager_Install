@@ -22,12 +22,6 @@ const surveyData = (token) => {
 
     }
 };
-const surveyID = () => {
-    return {
-        assess: '5e2cad9331d3458583bea6da5f19e488',
-        dig: '62060dec722640ae97ac2c5653950429',
-    }
-}
 
 
 var clientId = 'hhibAhdSLrpXfARP';
@@ -40,4 +34,13 @@ var redirectUri = 'https://testexternalapps.metrostlouis.org/busstopassessment/'
 
 // requests log
 // https://itic.occinc.com/wsexternal/service/getticketstatus/BiStateDevelopment/W3lc0me!/MO/1
+
+
+const surveyID = () => {
+    return {
+        assess: '5e2cad9331d3458583bea6da5f19e488',
+        dig: '62060dec722640ae97ac2c5653950429',
+    }
+}
+
 export { jsonURL, surveyID, surveyData, clientId, redirectUri }
