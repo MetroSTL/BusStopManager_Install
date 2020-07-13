@@ -288,8 +288,8 @@ const iframe_gen = (divid, url) => {
 
     div.innerHTML =
         `<div id='container' class='center w-100'>
-            <iframe id='ifrm' src='${url}'></iframe>
-            <div id='close' class='w-100 center'>
+        <iframe id='ifrm' src='${url}' allow="geolocation; microphone; camera"></iframe>
+        <div id='close' class='w-100 center'>
                 <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
             </div>
         </div>`;
@@ -438,6 +438,27 @@ const clickEvent = async (event) => {
   }
 };
 
+function handlePermission() {
+    navigator.permissions.query({name:'geolocation'}).then(function(result) {
+      if (result.state == 'granted') {
+        report(result.state);
+      } else if (result.state == 'prompt') {
+        report(result.state);
+        navigator.geolocation.getCurrentPosition(()=>console.log('success'), ()=>console.log('failed', {enableHighAccuracy: true}));
+      } else if (result.state == 'denied') {
+        report(result.state);
+      }
+      result.onchange = function() {
+        report(result.state);
+      }
+    });
+  }
+  
+  function report(state) {
+    console.log('Permission ' + state);
+  }
+  
+
 const initData = () => {
     getAssessments(surveyData(token).assess);
     getDigRequests(surveyData(token).dig);
@@ -447,6 +468,7 @@ const startPage = () => {
     if (fullHash) {
         clear_data();
         initData();
+        handlePermission();
         setInterval(()=>initData(),30*1000)
     }
 };
