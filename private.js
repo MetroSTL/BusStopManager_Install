@@ -25,7 +25,8 @@ const surveyData = (token) => {
 
 
 var clientId = 'hhibAhdSLrpXfARP';
-var redirectUri = 'https://externalapps.metrostlouis.org/busstopassessment';
+var redirectUri = 'https://aviddabbler.github.io/BusStopAssessmentApp/';
+// var redirectUri = 'https://externalapps.metrostlouis.org/busstopassessment';
 
 // do this on a button click to avoid popup blockers
 
