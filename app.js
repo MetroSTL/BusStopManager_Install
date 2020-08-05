@@ -1,5 +1,7 @@
 import { jsonURL, surveyID, surveyData, clientId, redirectUri  } from "./private.js";
 import nearest_place from './nearest_place.js';
+
+
 let token;
 const fullHash = document.location.hash.split('#')[1];
 if (fullHash) {
@@ -11,15 +13,27 @@ if (fullHash) {
 //STATIC URLS
 //HTML SECTION SELECTORS
 const list_div = document.getElementById("list");
-// let stop_search = document.getElementById("search").value;
-let signin = false
+
+let signin = false;
 
 // generic lists for putting list of stopID's
 let assessments = {
-    failed: [],
-    approved: [],
-    pending: [],
-    dig: [],
+    failed: {
+        obj:[],
+        list:[]
+    },
+    approved:  {
+        obj:[],
+        list:[]
+    },
+    pending: {
+        obj:[],
+        list:[]
+    },
+    dig:{
+        obj:[],
+        list:[]
+    },
     missing_place: nearest_place().features
 };
 
@@ -57,31 +71,37 @@ const clear_data = () => {
 
 // uses assessment status and returns color for css
 const setStatus = (stop) => {
+    console.log(stop)
     let obj;
         // failed renders red
-        if (assessments['failed'].includes(String(stop.attributes.stopID))) {
-            obj = {
-                color: 'red',
-                link: '',
-            };
+    if (assessments['failed'].list.includes(stop.attributes.stopID)) {
+        obj = {
+            color: 'red',
+            link: ''
+        };
         // approved renders green
-        } else if (assessments['approved'].includes(String(stop.attributes.stopID))) {
-            obj = {
-                color: 'green',
-                link: '',
-            };
+    } else if (assessments['approved'].list.includes(stop.attributes.stopID)) {
+        obj = {
+            color: 'green',
+            link: ''
+        };
         // pending renders orange
-        } else if (assessments['pending'].includes(String(stop.attributes.stopID))) {
-            obj = {
-                color: 'orange',
-                link: '',
-            };
+    } else if (assessments['pending'].list.includes(stop.attributes.stopID)) {
+        obj = {
+            color: 'orange',
+            link: ''
+        };
+    } else if (assessments['dig'].list.includes(stop.attributes.stopID)) {
+        obj = {
+            color: 'pink',
+            link: ''
+        };
         // renders unaddressed as blue
-        } else {
-            obj = {
-                color: 'blue',
-                link: '',
-            }
+    } else {
+        obj = {
+            color: 'blue',
+            link: ''
+        }
     };
 
     const countyCorrection = (co) => {
@@ -91,8 +111,10 @@ const setStatus = (stop) => {
             'SAINT LOUIS CITY': 'ST. LOUIS CITY',
             'ST. LOUIS COUNTY': 'ST. LOUIS CITY',
             'ST LOUIS COUNTY': 'ST. LOUIS',
-            'SAINT LOUIS COUNTY': 'ST. LOUIS CITY'
+            'SAINT LOUIS COUNTY': 'ST. LOUIS CITY',
+            'ST. LOUIS': 'ST. LOUIS CITY'
         }
+        console.log(co);
         if (county[co.toUpperCase()]) {
             return county[co.toUpperCase()]
         } else {
@@ -117,7 +139,7 @@ const setStatus = (stop) => {
         let muni = {
             'CREVE COUER': 'CREVE COUER',
             'ST LOUIS': "ST. LOUIS",
-            'ST LOUIS CITY': 'ST. LOUIS',
+            'ST LOUIS CITY': 'ST. LOUIS'
         };
 
         if (muni[stop['JURIS']]) {
@@ -128,7 +150,7 @@ const setStatus = (stop) => {
     }
 
     const digComplete = id => {
-        if (assessments['dig'].includes(parseInt(id))) {
+        if (assessments['dig'].list.includes(parseInt(id))) {
             return 'submitted strike'
         }
         else {
@@ -137,8 +159,8 @@ const setStatus = (stop) => {
     }
 
     // start of the data mapping for assessment / install survey / survey button 
-    return `
-        <a href="#details-${stop.attributes.stopID}"
+    return `<div>
+                <a href="#details-${stop.attributes.stopID}"
                     data-objectid = '${stop.attributes.objectid}'
                     data-globalid = '${stop.attributes.globalid}'
                     data-stopid = '${stop.attributes.stopID}'
@@ -147,10 +169,8 @@ const setStatus = (stop) => {
 
                     class='button_popup accordion-toggle center fl w-100 link dim br2 ph3 pv2 mb2 dib white bg-${obj.color}'>
                     <ul>
-                        <li class='f5 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}
-                        </li>
-                        <li class='f5 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}
-                        </li>    
+                        <li class='f5 helvetica'><b>Stop ID:</b> ${stop.attributes.stopID}</li>
+                        <li class='f5 helvetica'><b>Stop Name:</b> ${stop.attributes.stopName}</li>
                     </ul>
                 </a>
 
@@ -168,19 +188,20 @@ const setStatus = (stop) => {
                         data-stopid = '${stop.attributes.stopID}'
                         data-stopname = '${stop.attributes.stopName}'
                         data-stppos = '${stop.attributes.STP_P}'
-                        data-onst = '${stop.attributes.onSt}'}'
+                        data-onst = '${stop.attributes.onSt}'
                         data-atst = '${stop.attributes.atSt}'
                         data-city = '${cityCorrection(stop.attributes)}'
-                        data-county = '${countyCorrection(stop.attributes.COUNTY)}'
+                        data-county = '${countyCorrection( stop.attributes.COUNTY ? stop.attributes.COUNTY : stop.attributes.county )}'
                         data-state = '${stop.attributes.STATE}' 
                         data-holes = '${stop.attributes.Tholes}'
-                        data-location = '${stop.geometry.y}, ${stop.geometry.x}'
+                        data-y = '${stop.geometry.y}'
+                        data-x =  '${stop.geometry.x}'
                     >
                         Dig Survey
                     </a>
-                </div>`;
-
-};
+                </div>
+            </div>`
+        };
 
 // sort and render stops from specified list
 const render = async function (d) {
@@ -196,9 +217,9 @@ const render = async function (d) {
     });
 
     list_div.innerHTML = "";
-    await sorted_data.forEach((element) => {
-        list_div.innerHTML += setStatus(element, 'assess');
-    });
+    let div = await sorted_data.map( el => setStatus(el) );
+    console.log('render');
+    list_div.innerHTML = await div
     
 };
 
@@ -207,10 +228,10 @@ const dataLoading = fullHash ? '<h2 class="i">Data is loading...</h2>' : '<h2 cl
 
 
 // search and render stops (generic function)
-const searching = (stop_search, version) => {
+const searching = (stop_search) => {
     list_div.innerHTML = dataLoading;
     get_survey_data(stop_search).then((data) => {
-    render(data, version);
+    render(data);
   });
 };
 
@@ -221,28 +242,38 @@ const getAssessments = (url) => {
             data.forEach(el => {
                 // install has not been filled out
                 if (el.attributes.approved == "no" || el.attributes.approvalComments != null) {
-                    assessments['failed'].push(el.attributes.stopID);
+                    assessments['failed'].obj.push(el);
+                    assessments['failed'].list.push(el.attributes.stopID)
                 // if install was approved
                 } else if (el.attributes.approved == "yes" ) {
-                    assessments['approved'].push(el.attributes.stopID);
+                    assessments['approved'].obj.push(el);
+                    assessments['approved'].list.push(el.attributes.stopID)
+
                 // if stop is pending approval
                 } else if (el.attributes.approved == null && el.attributes.installToSpec != null) {
-                    assessments['pending'].push(el.attributes.stopID);
+                    assessments['pending'].obj.push(el);
+                    assessments['pending'].list.push(el.attributes.stopID)
+
                 }
             })
         return assessments
     }).then(assessments => {
-        if (assessments.failed.length > 0) {
+        if (assessments.failed.list.length > 0) {
             document.getElementById('notification-icon').src = 'assets/notification2.svg';}
-        if (assessments.pending.length > 0) {
+        if (assessments.pending.list.length > 0) {
             document.getElementById('mailbox-icon').src = 'assets/mailbox2.svg';}
     })
 };
 
 const getDigRequests = async (url) => {
     get_survey_data(url).then(data => {
-        data.forEach( async el => {        
-            assessments['dig'].push(parseInt(el.attributes.stop_id))
+        console.log(data)
+        data.forEach(el => {       
+            el.attributes.stopID = el.attributes.stop_id
+            el.attributes.stopName = el.attributes.stop_name
+            console.log(el)
+            assessments.dig.obj.push(el);
+            assessments.dig.list.push(el.attributes.stopID);
         })
         return assessments['dig'];
     })
@@ -251,33 +282,13 @@ const getDigRequests = async (url) => {
 
 // generic function that takes a type (pending, approved, failed) and renders only those stops
 const getIssues = async (type) => {
+    console.log('get issues')
     list_div.innerHTML = dataLoading;
-    const crossRef = async () => {
-        let list = [];
-        assessments[type].forEach(async item => {
-            await get_survey_data(await jsonURL(item, token).assess)
-                .then(data => {
-                    list.push(data[0]);
-                })
-        })
-        return await list;
-    };
-    crossRef().then(async data => {
-        let div = '';
-        // waits 3 seconds to 
-        setTimeout(async () => {
-            // renders if there are no stops that match that parameter
-            if (data.length == 0) {
-                list_div.innerHTML = '<h2 class="i">No Stops Match that Parameter</h2>';
-            }
-            // renders list of stops from the type list
-            await data.forEach(async (element) => {
-                list_div.innerHTML = ''
-                list_div.innerHTML += setStatus(element);
-                return await div;
-            })
-        }, 3000);
-    })
+
+    let l = await assessments[type].obj.length;
+    if(await l > 0) {
+        list_div.innerHTML = assessments[type].obj.map(el => setStatus(el))
+    }
 };
 
 // function for generating iframe for surveys
@@ -320,7 +331,7 @@ const open_survey = (item) => {
 
         if (dig) {
             return `https://survey123.arcgis.com/share/${surveyID().dig}
-            ?center=${dig.dataset.location}
+            ?center=${dig.dataset.y},${dig.dataset.x}
             &field:stop_id=${dig.dataset.stopid}
             &field:stop_name=${dig.dataset.stopname}
             &field:on_street=${dig.dataset.onst}
@@ -399,6 +410,7 @@ const clickEvent = async (event) => {
     // list of event targets
     const notification = event.target.closest('#notification-icon');
     const mailbox = event.target.closest('#mailbox-icon');
+    const dig_icon = event.target.closest('#dig-icon');
     const completed = event.target.closest('#completed-icon');
     const signInButton = event.target.closest('#sign-in-icon');
     const item = event.target.closest(".openpop");
@@ -432,7 +444,9 @@ const clickEvent = async (event) => {
     } else if (completed) {
         getIssues('approved');
         return;
-
+    } else if (dig_icon){
+        getIssues('dig');
+        return;
     } else if (event.target.closest(".openpop")) {
         open_survey(item);
   }
@@ -469,6 +483,7 @@ const startPage = () => {
         clear_data();
         initData();
         handlePermission();
+        console.log(assessments)
         setInterval(()=>initData(),30*1000)
     }
 };

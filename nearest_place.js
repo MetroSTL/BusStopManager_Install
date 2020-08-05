@@ -47172,4 +47172,3 @@ export default function nearest_place() {
     }
   ]
 }};
-
