@@ -93,10 +93,9 @@ ul {
 .accordion-toggle {
   display: flex;
   flex-direction: row;
+  height:75px;
 }
-.accordion-toggle a {
-  width: 50%;
-}
+
 
 .accordion-content {
   display: none;
