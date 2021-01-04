@@ -50,14 +50,14 @@ export class Stops extends Component {
             <div>
                 {features.map(feat=>{
                     return (
-                    <button key={feat.attributes.objectid} onClick={(e)=>this.onClick(e, feat.attributes.globalid)}>
+                    <button className='rounded-md w-100 white bg-blue' key={feat.attributes.objectid} onClick={(e)=>this.onClick(e, feat.attributes.globalid)}>
                         <h3>Stop ID: {feat.attributes.stop_id}</h3>
                         <h3>Stop Name: {feat.attributes.stop_name}</h3>
                     </button>)
                 })}
                 <div  id='icontainer'>
                     <iframe className='w-100 h-100' id='iframe' src={this.state.iframe}></iframe>
-                    <button onClick={()=>document.getElementById('icontainer').style.display = 'none'}>Close</button>
+                    <button className='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red' onClick={()=>document.getElementById('icontainer').style.display = 'none'}>Close</button>
                 </div>
             </div>
         )
