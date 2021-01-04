@@ -1,4 +1,4 @@
-import React, { Component, setState } from 'react';
+import React, { Component } from 'react';
 import Stops from'./Stops';
 import axios from 'axios';
 
@@ -50,7 +50,7 @@ export class Search extends Component {
                             Search</button>
                     </div>
                 </form>   
-                <Stops features={this.state.stops} /> 
+                <Stops features={this.state.stops} token={this.state.token} /> 
             </div>
         )
     }
