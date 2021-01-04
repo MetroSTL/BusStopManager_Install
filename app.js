@@ -10,6 +10,7 @@ if (fullHash) {
 }
 
 const sign_in = () => {
+    
     window.location.href = 'https://metroas08.metrostlouis.org/arcgis/sharing/rest/oauth2/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri), 'oauth-window', 'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
     logged_in = true;
 };
@@ -125,6 +126,7 @@ const render = async function (d) {
     let div = await sorted_data.map( el => {
         return `<div class='w-100 '>
                     <button 
+                        onclick='${open_survey(el)}'
                         data-globalid = '${el.attributes.globalid}'
                         class='w-100p-6 m-6 button_popup accordion-toggle center fl w-100 link dim br2 mb2 dib white bg-blue'>
                         <b>Stop ID:</b> ${el.attributes.stop_id}<br/>
@@ -169,17 +171,17 @@ const getAssessments = async (url) => {
 // // function for generating iframe for surveys
 // // divid == the div that the iframe will be inserted into (needs to be in the center of the page)
 // // url == the url that the iframe is directed to
-// const iframe_gen = (divid, url) => {
-//     const div = document.getElementById(divid);
+const iframe_gen = (divid, url) => {
+    const div = document.getElementById(divid);
 
-//     div.innerHTML =
-//         `<div id='container' class='center w-100'>
-//         <iframe id='ifrm' src='${url}' allow="geolocation; microphone; camera"></iframe>
-//         <div id='close' class='w-100 center'>
-//                 <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
-//             </div>
-//         </div>`;
-// };
+    div.innerHTML =
+        `<div id='container' class='center w-100'>
+        <iframe id='ifrm' src='${url}' allow="geolocation; microphone; camera"></iframe>
+        <div id='close' class='w-100 center'>
+                <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
+            </div>
+        </div>`;
+};
 
 // const close_survey = () => {
 //     const close_survey = event.target.closest('#close-survey');
@@ -200,40 +202,11 @@ const getAssessments = async (url) => {
 //     }
 // };
 
-const open_survey = (event, item) => {
-    let url = () => {
-        let dig = event.target.closest('.dig');
-
-        if (dig) {
-            return `https://survey123.arcgis.com/share/${surveyID()}
-            ?center=${dig.dataset.y},${dig.dataset.x}
-            &field:stop_id=${dig.dataset.stopid}
-            &field:stop_name=${dig.dataset.stopname}
-            &field:on_street=${dig.dataset.onst}
-            &field:at_street=${dig.dataset.atst}
-            &field:STP_P=${dig.dataset.stppos}
-            &field:city=${dig.dataset.city}
-            &field:county=${dig.dataset.county}
-            &field:_state=${dig.dataset.state}
-            &field:total_number_of_holes_at_stop=${dig.dataset.holes}
-            &token=${token}`
-        }
-        else {
-            return `https://survey123.arcgis.com/share/${surveyID().assess}?mode=edit&objectId=${item.dataset.objectid}&token=${token}`;
-        }
-
-    };
-        
-    let href = url();
-    if (href == "") {
-        return;
-    }
-    if (event.target.closest('.submitted')) {
-        alert('A dig request has already been submitted for this stop.');
-        return;
-    }
+const open_survey = (item) => {        
+    let href = `https://survey123.arcgis.com/share/${survey_id}?mode=edit&objectId=${item.objectid}&token=${token}`;
+    console.log('opened surve')
     iframe_gen('icontainer', href);
-    document.getElementById('app').style.display = 'none';
+    document.getElementById('icontainer').style.display = 'block';
     return;
 };
 
@@ -366,11 +339,14 @@ startPage()
 
 const clickEvent = (event) => {
     event.preventDefault()
-    if(event.target.closest('#sign-in')){
-        sign_in()
-    }
-    else if (event.target.closest(".openpop")) {
-        open_survey(event, item);
+    if(event.type == "click"){
+        if(event.target.closest('#sign-in')){
+            sign_in()
+        }
+        // else if (event.target.closest(".openpop")) {
+        //     open_survey(event, item);
+        // }
+        
     }
 }
     
