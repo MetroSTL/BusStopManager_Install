@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import './tachyons.min.css';
 import Search from './components/Search';
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-
-const notificationIcon = require('./assets/notification.svg')
-const signInIcon = require('./assets/login.svg')
+import loginIcon from './assets/login.svg';
 
 function App() {
   let token = '';  
@@ -24,15 +23,14 @@ function App() {
   } 
 
   return (
-    <Router>
       <div className="App">
         <div id="top-bar" class="w-100 flex">
             {/* <button id="notification" class="w-20  center items-center">
                 <img src={notificationIcon} alt='notification' ></img>
             </button> */}
 
-            <button id="sign-in" class="w-20  center items-center " onClick={getToken}>
-                <img id="sign-in-icon" src={signInIcon} alt='signin' />
+            <button id="sign-in" class="w-20 items-center ml-auto" onClick={getToken}>
+                <img id="sign-in-icon" src={loginIcon} alt='signin' />
             </button>
         </div>
         <div id="explain" class="ph2 tc">
@@ -41,7 +39,6 @@ function App() {
         </div>
         {token == '' ? <div><h1>You need to sign in</h1></div> : <Search token={token} />}
       </div>
-    </Router>
   );
 }
 

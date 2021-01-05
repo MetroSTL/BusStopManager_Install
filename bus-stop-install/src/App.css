@@ -37,7 +37,10 @@
   }
 }
 
-
+button{
+  background-color: transparent;
+  border-color: transparent;
+}
 body {
   margin: auto;
   max-width: 800px;
