@@ -49,7 +49,8 @@ export class Stops extends Component {
         return (
             <div>
                 <div>
-                {
+                {features.error ?
+                    <h1>You need to sign in</h1> :
                     features.map(feat=>{
                         return (
                             <a className='w-100p-6 m-6  w-100 link dim br2 mb2 dib white bg-blue' key={feat.attributes.objectid} onClick={(e)=>this.onClick(e, feat.attributes.globalid)}>
