@@ -1,6 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
 import './tachyons.min.css';
+import './App.css';
 import Search from './components/Search';
 import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
@@ -34,7 +34,7 @@ function App() {
             </button>
         </div>
         <div id="explain" class="ph2 tc">
-            <h3 class='tc center helvetica w-100'>Bus Stop Assessment App</h3>
+            <h3 class='tc center helvetica w-100'>Bus Stop Install App</h3>
             <p class="ct center w-100 helvetica w-100">Search for a bus stop to get started</p>
         </div>
         {token == '' ? <div><h1>You need to sign in</h1></div> : <Search token={token} />}
