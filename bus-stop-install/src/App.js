@@ -34,8 +34,6 @@ function App() {
 
   useEffect(() => {
     setToken(load());
-    console.log(user)
-    
 
   }, [])
   
