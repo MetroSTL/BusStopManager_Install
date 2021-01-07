@@ -2,16 +2,21 @@ import logo from './logo.svg';
 import './tachyons.min.css';
 import './App.css';
 import Search from './components/Search';
-import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import React, {useState} from 'react';
 import loginIcon from './assets/login.svg';
 
 function App() {
+  const [signedIn, setSignedIn] = useState(false);
+  const [user, setUser] = useState('');
   let token = '';  
   const fullHash = document.location.hash.split('#')[1];
   if (fullHash) {
       const params = JSON.parse('{"' + decodeURI(fullHash).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
       token = params.access_token
+  }
+
+  const load = () => {
+
   }
   
   const getToken = () => {
@@ -19,15 +24,13 @@ function App() {
     var clientID = 'ClUjM15qkXs1GSHA';
 
     window.location.href = 'https://metroas08.metrostlouis.org/arcgis/sharing/rest/oauth2/authorize?client_id=' + clientID + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri) + 'oauth-window' +'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
-    
+
   } 
 
   return (
       <div className="App">
         <div id="top-bar" class="w-100 flex">
-            {/* <button id="notification" class="w-20  center items-center">
-                <img src={notificationIcon} alt='notification' ></img>
-            </button> */}
+            <h3>{}</h3>
 
             <button id="sign-in" class="w-20 items-center ml-auto" onClick={getToken}>
                 <img id="sign-in-icon" src={loginIcon} alt='signin' />

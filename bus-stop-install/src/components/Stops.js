@@ -7,9 +7,11 @@ export class Stops extends Component {
         super(props);
 
         this.state={
-            iframe: ''
+            iframe: '',
+            display: 'none'
         }
         this.onClick = this.onClick.bind(this);
+        this.closeSurvey = this.closeSurvey.bind(this);
     }
 
 
@@ -17,35 +19,19 @@ export class Stops extends Component {
         const {token} = this.props;
         const survey_id = 'ad1421bb1d224e129752bba181588dc9'
 
-        const iframe_gen = (divid, url) => {
-            const div = document.getElementById(divid);
-        
-            div.innerHTML =
-                `<div id='container' class='center w-100'>
-                <iframe id='ifrm' src='${url}' allow="geolocation; microphone; camera"></iframe>
-                <div id='close' class='w-100 center'>
-                        <a id='close-survey' class='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red'>Close</a>
-                    </div>
-                </div>`;
-        };
-
-        const open_survey = (href) => {        
-            console.log('opened surve')
-            // iframe_gen('icontainer', href);
-            this.setState({iframe:href})
-            document.getElementById('icontainer').style.display = 'block';
-            document.getElementById('icontainer').src = href;
-            return;
-        };
-
-        
         let href = `https://survey123.arcgis.com/share/${survey_id}?portalUrl=https://metroas08.metrostlouis.org/arcgis&mode=edit&globalId=${globalid}&token=${token}`;
 
-        open_survey(href)
+        this.setState({iframe: href, display: 'block'})
+
+    }
+
+    closeSurvey() {
+        this.setState({iframe: '', display: 'none'})
     }
 
     render() {
         const {features} = this.props;
+        const {iframe} = this.state;
         return (
             <div>
                 <div>
@@ -61,9 +47,9 @@ export class Stops extends Component {
                     })
                 }
                 </div>
-                <div  id='icontainer'>
+                <div  id='icontainer' style={{display: `${iframe == '' ? 'none' : 'block'}`}}>
                     <iframe className='w-100 h-100' id='iframe' src={this.state.iframe}></iframe>
-                    <button className='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red' onClick={()=>document.getElementById('icontainer').style.display = 'none'}>Close</button>
+                    <button className='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red' onClick={this.closeSurvey}>Close</button>
                 </div>
             </div>
         )
