@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-
-
 export class Stops extends Component {
     constructor(props) {
         super(props);
@@ -48,7 +46,7 @@ export class Stops extends Component {
                 }
                 </div>
                 <div  id='icontainer' style={{display: `${iframe == '' ? 'none' : 'block'}`}}>
-                    <iframe className='w-100 h-100' id='iframe' src={this.state.iframe}></iframe>
+                    <iframe className='w-100 h-100' id='iframe' src={iframe}></iframe>
                     <button className='center w-30 helvetica f5 link br2 pv3 dib white bg-dark-red' onClick={this.closeSurvey}>Close</button>
                 </div>
             </div>

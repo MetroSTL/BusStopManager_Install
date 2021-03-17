@@ -4,11 +4,11 @@ import './App.css';
 import Search from './components/Search';
 import React, {useState, useEffect} from 'react';
 import loginIcon from './assets/login.svg';
+import axios from 'axios';
 
 function App() {
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState('');
-  const [loaded, setLoaded] = useState(false);
   const [token, setToken] = useState('');
   
   const load = () => {
@@ -27,21 +27,19 @@ function App() {
   const getToken = () => {
     var redirectUri = 'http://127.0.0.1:3000/';
     var clientID = 'ClUjM15qkXs1GSHA';
-    
     window.location.href = 'https://metroas08.metrostlouis.org/arcgis/sharing/rest/oauth2/authorize?client_id=' + clientID + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri) + 'oauth-window' +'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
-    
   };
 
   useEffect(() => {
     setToken(load());
 
-  }, [])
+  })
   
 
   return (
       <div className="App">
         <div id="top-bar" class="w-100 flex">
-            <h3>{token == '' ? '' : user}</h3>
+            <h3>{signedIn ? user : '' }</h3>
 
             <button id="sign-in" class="w-20 items-center ml-auto" onClick={getToken}>
                 <img id="sign-in-icon" src={loginIcon} alt='signin' />
@@ -51,7 +49,7 @@ function App() {
             <h3 class='tc center helvetica w-100'>Bus Stop Install App</h3>
             <p class="ct center w-100 helvetica w-100">Search for a bus stop to get started</p>
         </div>
-        {token == '' ? <div><h1>You need to sign in</h1></div> : <Search token={token} />}
+        {signedIn ? <Search token={token} /> : <div><h1>You need to sign in</h1></div>}
       </div>
   );
 }
