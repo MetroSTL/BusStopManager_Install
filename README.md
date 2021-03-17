@@ -5,7 +5,7 @@ The purpose of this application is to inspect past inspections. The way that it 
 
 ## search() is where the requests are made
 
-- [Install Survey Results Bus Stop Manager](https://maps.metrostlouis.org/arcgis/home/item.html?id=61074008b9bb40e99f31eaf5da5bcc11) (REACT_APP_ID and REACT_APP_REDIRECT_URI env variable locations)
+- [Install Survey Results Bus Stop Manager](https://maps.metrostlouis.org/arcgis/home/item.html?id=61074008b9bb40e99f31eaf5da5bcc11) (REACT_APP_ID and REACT_APP_REDIRECT_URI)
 - [Survey](https://maps.metrostlouis.org/arcgis/home/item.html?id=ad1421bb1d224e129752bba181588dc9) (Location of Install survey)
 - Portal = https://maps.metrostlouis.org/arcgis
 
